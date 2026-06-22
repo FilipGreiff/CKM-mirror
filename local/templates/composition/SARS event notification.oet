@@ -147,7 +147,7 @@
             archetype_id="openEHR-EHR-EVALUATION.problem_diagnosis.v1"
             path="/content" xsi:type="tem:EVALUATION"/>
         <Content
-            archetype_id="openEHR-EHR-OBSERVATION.imaging_exam_result.v0"
+            archetype_id="openEHR-EHR-OBSERVATION.imaging_exam_result.v1"
             path="/content" xsi:type="tem:OBSERVATION"/>
         <Content
             archetype_id="openEHR-EHR-OBSERVATION.laboratory_test_result.v1"
@@ -327,7 +327,7 @@
         <digest id="MD5-CAM-1.0.1">4BF04E7D09B866397CA12BAFED2BC216</digest>
     </integrity_checks>
     <integrity_checks
-        archetype_id="openEHR-EHR-OBSERVATION.imaging_exam_result.v0"
+        archetype_id="openEHR-EHR-OBSERVATION.imaging_exam_result.v1"
         xmlns:tem="openEHR/v1/Template"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
         <digest id="MD5-CAM-1.0.1">636D8356D589C61CAD7589B340C685AD</digest>

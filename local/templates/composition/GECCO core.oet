@@ -1146,7 +1146,7 @@ The requirements used in the creation of this template are sourced from the FHIR
             concept_name="Ad hoc heading" max="1" name="Imaging"
             path="/content" xsi:type="tem:SECTION">
             <Item
-                archetype_id="openEHR-EHR-OBSERVATION.imaging_exam_result.v0"
+                archetype_id="openEHR-EHR-OBSERVATION.imaging_exam_result.v1"
                 max="1" path="/items" xsi:type="tem:OBSERVATION">
                 <Rule path="/data[at0001]/events[at0002]/data[at0003]/items[at0004]">
                     <constraint xsi:type="tem:textConstraint">
@@ -2540,7 +2540,7 @@ The requirements used in the creation of this template are sourced from the FHIR
         <digest id="MD5-CAM-1.0.1">792E5D4AFD244ADC6C0531F1EC76CADF</digest>
     </integrity_checks>
     <integrity_checks
-        archetype_id="openEHR-EHR-OBSERVATION.imaging_exam_result.v0"
+        archetype_id="openEHR-EHR-OBSERVATION.imaging_exam_result.v1"
         xmlns:tem="openEHR/v1/Template"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="tem:ArchetypeIntegrity">
         <digest id="MD5-CAM-1.0.1">636D8356D589C61CAD7589B340C685AD</digest>

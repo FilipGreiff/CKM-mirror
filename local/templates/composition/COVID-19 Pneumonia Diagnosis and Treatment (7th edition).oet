@@ -1145,7 +1145,7 @@
         <Item xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.pf_ratio.v0" concept_name="PaO2/FiO2 ratio" path="/items" />
       </Item>
       <Item xsi:type="SECTION" archetype_id="openEHR-EHR-SECTION.adhoc.v1" concept_name="Ad hoc heading" max="1" path="/items" name="Imaging tests">
-        <Item xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.imaging_exam_result.v0" concept_name="Imaging examination result" max="1" path="/items" name="Chest x-ray">
+        <Item xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.imaging_exam_result.v1" concept_name="Imaging examination result" max="1" path="/items" name="Chest x-ray">
           <Rule path="/data[at0001]/events[at0002]" max="1" name="Baseline" />
           <Rule path="/data[at0001]/events[at0002 and name/value='Baseline']/data[at0003]/items[at0004]">
             <constraint xsi:type="textConstraint">
@@ -1234,7 +1234,7 @@
             <Rule path="/items[at0003]" max="0" />
           </Items>
         </Item>
-        <Item xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.imaging_exam_result.v0" concept_name="Imaging examination result" max="1" path="/items" name="CT Chest">
+        <Item xsi:type="OBSERVATION" archetype_id="openEHR-EHR-OBSERVATION.imaging_exam_result.v1" concept_name="Imaging examination result" max="1" path="/items" name="CT Chest">
           <Rule path="/data[at0001]/events[at0002]" max="1" name="Baseline" />
           <Rule path="/data[at0001]/events[at0002 and name/value='Baseline']/data[at0003]/items[at0004]">
             <constraint xsi:type="textConstraint">
@@ -1632,7 +1632,7 @@
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-OBSERVATION.pf_ratio.v0">
     <digest id="MD5-CAM-1.0.1">F7C52B16AB1D3733AB8D803A6E397C37</digest>
   </integrity_checks>
-  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-OBSERVATION.imaging_exam_result.v0">
+  <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-OBSERVATION.imaging_exam_result.v1">
     <digest id="MD5-CAM-1.0.1">7EC26959219E7B5ABB6B9B7E72DABCC3</digest>
   </integrity_checks>
   <integrity_checks xsi:type="ArchetypeIntegrity" archetype_id="openEHR-EHR-CLUSTER.imaging_finding.v0">
