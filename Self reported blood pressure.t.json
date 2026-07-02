@@ -19,9 +19,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "1.0.0",
+      "sem_ver" : "2.0.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "4bd74109210601df7db87386cf6bd2c4",
+      "MD5-CAM-1.0.1" : "85e5064d1ec7624c6f283f46b64c6a4f",
       "PARENT:MD5-CAM-1.0.1" : "D1C4FAAB741EAA41EDA9E0651266BCFD"
     },
     "details" : {
@@ -248,6 +248,15 @@
         "attributeTuples" : [ ],
         "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-medication_screening-001.v1",
         "referenceType" : "archetypeOverlay"
+      }, {
+        "@type" : "C_ARCHETYPE_ROOT",
+        "rmTypeName" : "OBSERVATION",
+        "occurrences" : "0..1",
+        "nodeId" : "at0.14",
+        "attributes" : [ ],
+        "attributeTuples" : [ ],
+        "archetypeRef" : "openEHR-EHR-OBSERVATION.ovl-pulse-001.v2",
+        "referenceType" : "archetypeOverlay"
       } ]
     } ],
     "attributeTuples" : [ ]
@@ -385,7 +394,275 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "17D4965B19A8339F74AF049209818DF1"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Dient der Dokumentation des systemischen arteriellen Blutdrucks einer Person.",
+          "keywords" : [ "Beobachtungen", "Messungen", "Vitalparameter", "Mittlerer arterieller Druck", "Pulsdruck", "systolisch", "diastolisch", "RR", "Riva-Rocci", "NIBP" ],
+          "use" : "Alle Blutdruckmessungen werden unter Zuhilfenahme dieses Archetypen dokumentiert, unabhängig davon, welche Methode oder Körperstelle zur Messung benutzt wurden. Der Archetyp dient der Dokumentation des Blutdrucks in alle klinischen Szenarien - z.B. durch eine Blutdruckmaschine zuhause; eine Notfallmessung durch Palpation und ein Sphygmomanometer; Messungen beim Hausarzt oder im Rahmen von Belastungstests; sowie einer Serie von Messungen durch eine Maschine auf der Intensivstation.\r\nDer Archetyp beinhaltet ein umfassendes Status-Modell, das die Interpretation der Messung unterstützt, indem Position, Anstrengung, Einflussfaktoren, Neigungswinkel angegeben werden können.\r\nBenannte Ereignisse wurden auf den 24-stündigen Durchschnitt beschränkt, jedoch können Templates jederzeit das standardmäßig vorhandene Ereignis ('any event') weiter einschränken, um spezifischen Anforderungen gerecht zu werden, wie z.B. der Messung zu bestimmten Zeitpunkten, oder über eine Anzahl von Intervallen (+/- mathematische Funktionen).",
+          "misuse" : "Nicht benutzen zur Dokumentation des intravenösen Drucks.\r\nNicht benutzen zur Dokumentation des arteriellen Blutdrucks, welcher KEIN Surrogat für den arteriellen Druck in der systemischen Zirkluation ist, z.B. die spezifische Messung des rechten pulmonaren Arteriendrucks.\r\nIn diesem Fall sollte der OBSERVATION.intravascular_pressure Archetyp bzw. dessen Spezialisierungen verwendet werden.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "ru" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "ru"
+          },
+          "purpose" : "Для записи системного артериального давления крови человека.",
+          "keywords" : [ "обследование", "измерение", "артериальное давление", "диастолическое", "систолическое" ],
+          "use" : "Используется для записи всех представлений измерения системного артериального  кровяного давления, независимо от используемого метода или расположения тела пациента. Архетип предназначен для записи измерений давления во всех клинических сценариях - например, самостоятельное измерение давления крови домашним автоматическим манометром, в чрезвычайной  ситуации использование  пальпации пульсовой волны и сфигмоманометр; измерений в ходе клинических консультаций или в ходе осуществления стресс-тестирования, а также серии измерений, выполненных аппаратом в реанимации.\r\nПоддерживает интерпретацию измерений путем определения позиции пациента, физические упражнения, осложняющих факторов и угла наклона стола в научных исследованиях.\r\nПредполаагется интервал между измерениями 24 часа, однако может быть дополнено событиями (по умолчанию \"любое событие\") для удовлетворения специфических требований для измерения кровяного давления, такие как записи в отношении кровяного давления конкретные моменты времени, или в диапазоне интервалов.",
+          "misuse" : "Не следует использовать для внутривенного давления.\r\nНе следует использовать для измерения артериального давления, которое не является суррогатом артериального давления в системном кровотоке, например, конкретные измерения давления в легочной артерии.\r\nИспользовать OBSERVATION.intravascular_pressure и смежных специальностей в обоих этих ситуациях.\r\n",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "sv" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "sv"
+          },
+          "purpose" : "Att registrera det systemiska arteriella blodtrycket hos en individ.",
+          "keywords" : [ "observation", "mätning", "blodtryck", "vitalparameter", "vitaltecken", "medelartärtryck", "pulstryck", "systoliskt", "diastoliskt", "SBT", "DBT", "BT", "BP", "SBP", "DBP", "MAP" ],
+          "use" : "Används för att registrera alla systemiskt arteriella blodtryck, oavsett vilka metoder som använts och var på kroppen mätningen gjordes. \r\n\r\nArketypen är avsedd för blodtrycksmätningar i alla kliniska scenarier, exempelvis: \r\n\r\n- egna mätningar i hemmet med blodtrycksmätare \r\n\r\n- akutbedömningar av det systoliska blodtrycket med hjälp av palpation och en sfygmomanometer\r\n\r\n- mätningar gjorda vid vårdkonsultationer eller stresstest \r\n\r\n- seriemätningar med blodtrycksmaskiner på intensivvårdsavdelningar \r\n\r\nDet finns en omfattande tillståndsmodell som stödjer tolkningen av mätningar genom identifiering av patientens ställning, ansträngning, vinkel på tippbräda vid undersökning och möjliga felkällor. \r\n\r\nNamngivna händelser har begränsats till ett genomsnitt under en 24-timmarsperiod. Det är dock möjligt att  ytterligare avgränsa denna standardinställning i \"Ospecificerad händelse\" i en template för att möta specifika krav på blodtrycksmätningar, exempelvis mätningar av blodtryck vid specifika tidpunkter eller under ett tidsintervall (+/- matematiska funktioner).",
+          "misuse" : "Ska inte användas för att registrera mätning av arteriellt blodtryck som INTE är ett substitut för artärtryck i den systemiska cirkulationen, exempelvis för specifika mätningar av artärtryck i höger lungartär. Använd OBSERVATION.intravascular_pressure i dessa fall. \r\n\r\nSka inte användas för att registrera exempelvis specifika mätningar av artärtryck i höger lungartär. Använd OBSERVATION.intravascular_pressure i dessa fall. \r\n\r\nSka inte användas för att registrera mätning av intravenöst tryck. Använd OBSERVATION.intravascular_pressure och relaterade specialiseringsarketyper i dessa fall.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fi" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fi"
+          },
+          "purpose" : "Henkilön verenpaineen tallentamiseen.",
+          "keywords" : [ "havainnot, mittaus, verenpaine, vitaalit, keskivaltimopaine, pulssipaine, systolinen, diastolinen, RR, NIBP" ],
+          "use" : "Käytetään systeemisen valtimoverenpaineen mittauksen tallentamiseen riippumatta menetelmästä tai mittauskohdasta.\r\n\r\nArkkityypin avulla kerätään verenpainemittauksia kaikissa kliinisissä skenaarioissa - esimerkiksi:\r\n- omaseuranta kotona verenpainemittarilla;\r\n- systolisen verenpaineen hätäarviointi palpoiden tai verenpainemittarilla;\r\n- terveydenhuollon ammattilaisen suorittamat mittaukset tai rasitustestin aikaiset mittaukset; ja\r\n- tehohoidon aikaiset jatkuvat mittaukset\r\n\r\nTietomallissa voidaan monipuolisesti määritellä mittaustilanne, kuten potilaan asento, liikunta, sekoittavat tekijät ja kallistuspöydän kulma, jotka tukevat mittauksen tulkintaa.\r\n\r\nNimettyjen tapahtumien määrä on rajoitettu 24 tunnin aikaiseen keskiarvoon, mutta templaateilla voidaan edelleen rajoittaa oletusarvoista \"mitä tahansa tapahtumaa\", joka vastaa erityisiä vaatimuksia verenpainemittauksille, kuten verenpaineen tallentaminen tiettyihin ajankohtiin tai tietyin väliajoin (+/- matemaattiset funktiot).",
+          "misuse" : "Ei tule käyttää valtimoverenpaineen mittauksen tallentamiseen, joka ei ole systeemisen verenkierron verenpaineen korvike, esim. Oikean keuhkovaltimon paineen erityinen mittaus. Käytä tässä tilanteessa OBSERVATION.intravascular_pressure-arkkityyppiä.\r\n\r\nEi tule käyttää laskimonsisäisen paineen mittauksen kirjaamiseen. Sovella tässä tilanteessa OBSERVATION.intravascular_pressure -arkkityyppiä.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "ko" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "ko"
+          },
+          "purpose" : "개인의 체동맥혈압 기록",
+          "keywords" : [ "*관찰(ko)", "*측정(ko)", "*혈압(ko)", "*생체징후(ko)", "*평균 동맥 혈압(ko)", "*맥압(ko)", "*수축기의(ko)", "*이완기의(ko)", "*호흡수(ko)", "*비침습적 혈압(ko)" ],
+          "use" : "전신 동맥혈압측정의 모든 표현들을 저장하는데 사용, 어떤 방법 또는 신체부위와 관계없이 기록하는데 사용된다. 이 archetype은 모든 임상 시나리오에서 동맥혈압을 획득하기 위한 것이다 - 예를 들어, 가정 혈압기기를 이용한 자가 측정; 타진과 혈압계를 이용한 수축기의 응급평가; 임상 의뢰 또는 운동부하검사에서의 측정; 그리고 중환자실에서 기계에 의한 일련의 측정.\r\n\r\n여기에는 환자 자세, 운동, 혼란 변수 그리고 연구에서 틸트테이블의 각도를 통한 측정의 해석을 지원하는 풍부한 상태 모델(state model)이 있음.\r\n\r\n명명된 events는 24시간 동안의 평균에 제한되어 있지만 templates는 특정 시각 또는 기간(+/- 수학 함수)에 대한 혈압의 기록과 같은 혈압 측정을 위한 특정한 요구사항을 제공하기 위해서 default 'any event'에 추가적인 constrain을 할 수 있음.",
+          "misuse" : "정맥혈압 측정을 위해서 사용되지 않음.\r\n\r\n예를 들어 우폐동맥압과 같은 특별한 측정과 같이 체순환에서의 동맥압을 대신하지 않는 동맥혈압의 측정을 위해 사용되지 않음.\r\n\r\n위의 2가지 상황에서는 OBSERVATION.intravascular_pressure와 관련된 specialisations를 사용해야 함.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "pt-br" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "pt-br"
+          },
+          "purpose" : "Para registrar a pressão arterial sistêmica de um indivíduo.",
+          "keywords" : [ "observações", "medidas", "PA", "pressão sanguínea", "sinais vitais", "Pressão arterial média", "Pressão de Pulso", "sistólica", "diástólica" ],
+          "use" : "Usado para registrar todas as representações da medida da pressão areterial sistêmica, não importando qual método ou localização corporal usada para registrá-la. O objetivo do arquétipo é capturar a pressão sanguínea em todos os cenários clínicos - por exemplo, auto-medida com um aparelho de pressão caseiro; um avaliação de emergência da pressão sistólica usando palpação e esfigmomanômetro; medidas realizadas em consultas clínicas ou durante testes de esforço; e uma série de medidas feitas por uma máquina em uma Unidade de Terapia Intensiva.\r\nExiste um modelo rico que apoia a interpretação de medidas através da identificação da posição do paciente, nível exercício, gatores confundidores e ângulo de uma mesa de inclinação em uma pesquisa.\r\nEventos nomeados têm sido limitados em médica a um período de 24 horas, entretanto templates podem, posteriormente, restringir o padrão predeterminado 'qualquer evento' para atender a requisitos específicos registro de medida de pressão sanguínea em pontos no tempo específicos, ou em faixas de intervalos (+/-funções matemáticas).",
+          "misuse" : "Não deve ser usada para registrar pressão intravenosa.\r\nNão deve ser usada para medida da pressão arterial que NÃO é um substituto da pressão arterial na circulação sistêmica, por exemplo, medida específica da pressão da artéria Pulmonar direita.\r\nEm ambas situações use OBSERVATION.intravascular_pressure e especializações relacionadas.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "el" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "el"
+          },
+          "purpose" : "Για την καταγραφή της συστηματικής αρτηριακής πίεσης ενός ατόμου.",
+          "keywords" : [ "Παρατηρήσεις", "μέτρηση", "ΒΡ", "Ζωτικά σημεία", "μέση αρτηριακή πίεση", "παλμική πίεση", "Συστολική", "Διαστολική", "RR", "NIBP" ],
+          "use" : "*Use to record all representations of systemic arterial blood pressure measurement, no matter which method or body location is used to record it. \r\n\r\nThe archetype is intended to capture blood pressure measurements in all clinical scenarios - for example:\r\n- self-measurement with a home blood pressure machine; \r\n- an emergency assessment of systolic using palpation and a sphygmomanometer; \r\n- measurements taken in clinical consultations or during exercise stress testing; and \r\n- a series of measurements made by a machine in Intensive Care.   \r\n\r\nThere is a rich state model that supports interpretation of measurements through identifying patient position, exercise, confounding factors and angle of a tilt table in research. \r\n\r\nNamed events have been limited to average over a 24 hour period, however templates can further constrain the default 'any event' to cater for specific requirements for blood pressure measurements such as recording Blood Pressure against specific points in time, or over a range of intervals (+/- mathematical functions).(en)",
+          "misuse" : "*Not to be used to record the measurement of arterial blood pressure which is NOT a surrogate for arterial pressure in the systemic circulation eg specific measurement of right pulmonary artery pressure. Use OBSERVATION.intravascular_pressure in this situation.  \r\n\r\nNot to be used to record measurements of intravenous pressure. Use the appropriate specialisations of OBSERVATION.intravascular_pressure in this situation.(en)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "ar-sy" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "ar-sy"
+          },
+          "purpose" : "لتسجيل ضغط الدم الشرياني النظامي للشخص",
+          "keywords" : [ "الملاحظات", "القياس", "ضغط الدم", "العلامات الحياتية", "متوسط الضغط الشرياني", "الضغط عند النبض", "الانقباضي", "الانبساطي", "معدل التنفس", "قياس ضغط الدم غير الباضع" ],
+          "use" : "يستخدم لتسجيل جميع طرق عرض ضغط الدم الشرايني النظامي, بغض النظر عن الطريقة أو الموضع من الجسم المستخدم في التسجيل.\r\n\r\nيستخدم هذا النموذج لالتقاط قياسات ضغط الدم في جميع السيناريوهات السريرية - مثلا, قياس ضغط الدم بواسطة الشخص لنفسه باستخدام آلة القياس المنزلية, تقييم الضغط الانقباضي في حالة الطوارئ باستخدام المجس و مقياس الضغط الزئبقي, القياسات التي تم أخذها في الاستشارات السريرية أو في أثناء اختبار الضغط البدني, و سلسلة من القياسات التي تتم باستخدام آلات العناية المركزة.\r\n\r\nيستخدم هذا النموذج الغني في تسجيل حالات القياس من خلال تفسيره في ضوء وضع المريض عند القياس, المجهود البدني, العوامل المربكة, و زاوية انحناء الطاولة المستخدمة عند القياس.\r\n\r\nتم تحديد بعض الوقائع إلى المتوسط خلال 24 ساعة, إلا أن القوالب تستطيع تقييد الاختيار التلقائي (إحدى الوقائع) لمتطلبات معينة حول قياسات ضغط الدم مثل تسجيل ضغط الدم في نقاط زمنية معينة أو خلال مدى من الفواصل الزمنية - زائد أو ناقص دوال حسابية",
+          "misuse" : "لا يستخدم لتسجيل الضغط داخل الوريد.\r\nلا يستخدم لقياس ضغط الدم الشرياني الذي لا يحل بديلا عن ضغط الدم الشرياني في الدورة الجهازية مثل قياسات معينة لضغط الشريان الرئوي الأيمن.\r\nاستخدم نموذج ملاحظة. الضغط داخل الأوعية الدموية , و التخصيصات المتعلقة في كل من هذين الموقفين.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record the systemic arterial blood pressure of an individual.",
+          "keywords" : [ "observations", "measurement", "bp", "vital signs", "mean arterial pressure", "pulse pressure", "systolic", "diastolic", "RR", "NIBP" ],
+          "use" : "Use to record all representations of systemic arterial blood pressure measurement, no matter which method or body location is used to record it. \r\n\r\nThe archetype is intended to capture blood pressure measurements in all clinical scenarios - for example:\r\n- self-measurement with a home blood pressure machine; \r\n- an emergency assessment of systolic using palpation and a sphygmomanometer; \r\n- measurements taken in clinical consultations or during exercise stress testing; and \r\n- a series of measurements made by a machine in Intensive Care.   \r\n\r\nThere is a rich state model that supports interpretation of measurements through identifying patient position, exercise, confounding factors and angle of a tilt table in research. \r\n\r\nNamed events have been limited to average over a 24 hour period, however templates can further constrain the default 'any event' to cater for specific requirements for blood pressure measurements such as recording Blood Pressure against specific points in time, or over a range of intervals (+/- mathematical functions).",
+          "misuse" : "Not to be used to record the measurement of arterial blood pressure which is NOT a surrogate for arterial pressure in the systemic circulation eg specific measurement of right pulmonary artery pressure. Use OBSERVATION.intravascular_pressure in this situation.  \r\n\r\nNot to be used to record measurements of intravenous pressure. Use the appropriate specialisations of OBSERVATION.intravascular_pressure in this situation.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "zh-cn" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "zh-cn"
+          },
+          "purpose" : "旨在记录一个人的体循环血压（systemic blood pressure，全身血压，系统血压）。此测量结果原始型记录的是收缩压和舒张压，所采取的记录方式适合于视为代表全身体循环血压的结果。",
+          "keywords" : [ "观察", "观测", "观察指标", "观测指标", "观察结果", "观测结果", "观察项目", "观测项目", "检测", "测量", "测定", "检测指标", "测量指标", "测定指标", "检测结果", "测量结果", "测定结果", "检测项目", "测量项目", "测定项目", "血压", "blood pressure", "bp", "生命体征", "体征", "平均动脉压", "脉压", "脉搏压", "收缩压", "舒张压", "收缩期", "舒张期", "RR", "无创性测压法", "non-invasive blood pressure", "NIBP" ],
+          "use" : "用于记录体循环血压测量结果的所有表达形式，无论其用于记录结果的究竟是什么方法或身体位置。本原始型旨在采集所有临床场景下的血压测量结果；例如，采用家用血压测量仪进行的自助检测、采用触诊方法和血压计进行的收缩压紧急评估、临床会诊或运动负荷试验过程中进行的测量以及重症监护过程中利用仪器所完成的一系列测量。\r\n这是一个丰富的状态模型，支持通过确定患者体位、运动情况、干扰因素以及研究工作所采用的倾斜工作台的角度，来解释测量结果。\r\n具名事件（named events）仅限于24小时期间的均值；不过，可以利用模板来进一步约束默认的“any event”（任何事件），以满足关于血压测量的具体需要，诸如按具体的时间点（时刻）来记录血压，或者是记录为变化范围（+/-数学函数）。",
+          "misuse" : "并不用于静脉内血压。\r\n并不用于并非代表体循环动脉压的动脉血压的测量，如右肺动脉压的专用测量指标。\r\n在上述这两种情况下，请采用血管内压力观察指标原始型（OBSERVATION.intravascular_pressure）及相关的特化形式。",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "es" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "es"
+          },
+          "purpose" : "Registro de la presión arterial sistémica de un paciente.",
+          "keywords" : [ "observaciones", "medición", "presión arterial", "signos vitales", "presión arterial media", "presión del pulso", "sistólica", "diastólica", "FR", "PANI" ],
+          "use" : "Utilícese para registrar todas las mediciones de la presión arterial sistémica, independientemente del método o la ubicación corporal que se utilice para registrarla. \r\n\r\nEl arquetipo está diseñado para capturar mediciones de la presión arterial en todos los escenarios clínicos, por ejemplo:\r\n- automedición con un tensiómetro doméstico;\r\n- evaluación de emergencia de la presión sistólica mediante palpación y esfigmomanómetro;\r\n- mediciones realizadas en consultas clínicas o durante pruebas de esfuerzo; y\r\n- una serie de mediciones realizadas por una máquina en cuidados intensivos. \r\n\r\nExiste un modelo de estado muy completo que permite interpretar las mediciones mediante la identificación de la posición del paciente, el ejercicio, los factores de confusión y el ángulo de una mesa basculante en la investigación. \r\n\r\nLos eventos nombrados se han limitado a la media de un periodo de 24 horas, sin embargo, las plantillas pueden restringir aún más el «cualquier evento» predeterminado para adaptarse a requisitos específicos de las mediciones de la presión arterial, como el registro de la presión arterial en momentos específicos o en un rango de intervalos (+/- funciones matemáticas).",
+          "misuse" : "No debe utilizarse para registrar la medición de la presión arterial, que NO es un sustituto de la presión arterial en la circulación sistémica, por ejemplo, la medición específica de la presión de la arteria pulmonar derecha. En este caso, utilice OBSERVATION.intravascular_pressure.\r\n\r\nNo debe utilizarse para registrar mediciones de la presión intravenosa. En este caso, utilice las especializaciones adecuadas de OBSERVATION.intravascular_pressure.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "es-ar" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "es-ar"
+          },
+          "purpose" : "Registrar la presión arterial sistémica de un individuo",
+          "keywords" : [ "observaciones(sp)", "mediciones(sp)", "presión arterial(sp)", "signos vitales(sp)", "presión arterial media(sp)", "presión pulso(sp)", "sistólica(sp)", "diastólica(sp)", "RR(en)", "Presión Arterial No Invasiva(sp)", "PANI(sp)" ],
+          "use" : "Usar para registrar todas las representaciones de la presión arterial sistémica, sin importar que método o localización del cuerpo se use para el registro. El arquetipo se usa para capturar la medida de la presión arterial en todos los escenarios clínicos - por ejemplo: automedición con un tensiómetro de uso domiciliario; la evaluación en situación de emergencia, de la sistólica usando palpación y un esfingomanómetro; medidas tomadas durante la consulta clínica o durante la prueba de esfuerzo (ergometría); y la serie de medidas automáticas hechas en la Unidad de Cuidados Intensivos.\r\nExiste un variado modelo de situaciones que soporta la interpretación de mediciones a través de la interpretación de la posición del paciente, ejercicio, factores confluentes y el ángulo de inclinación de la camilla en situaciones de investigación.\r\nLos eventos se han limitado a promediarse sobre un intervalo de 24 horas, sin embargo plantillas pueden acotar la medida por defecto 'cualquier evento' para ajustarse a requerimientos específicos de medida de la presión arterial como el Registro de la Tensión Arterial durante momentos específicos de tiempo, o sobre un rango de intervalos (+/- funciones matemáticas)\r\n\r\n ",
+          "misuse" : "No debe usarse para la presión intravenosa\r\nNo debe usarse para la medida de la presión arterial que NO deriva de la presión arterial de la circulación sistémica ej: la medida específica de la presión de la arteria Pulmonar (presión capilar)\r\nUsen Observación.presión_intravascular y especializaciones relacionadas para estas dos situaciones en particular.\r\n",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For registrering av et individs systemiske arterielle blodtrykk.",
+          "keywords" : [ "BT", "NIBP", "pulstrykk", "pulsamplitude", "MAP", "IBP", "IBPM", "ABP", "ambulatorisk", "24t", "BP", "ikke-invasivt", "invasivt", "NIBPS", "NIBPD", "NIBPM", "middelarterietrykk", "SAP", "DAP", "PP", "systolisk", "diastolisk", "blodtrykk" ],
+          "use" : "Brukes til å registrere alle typer av systemisk arteriell blodtrykksmåling, uansett hvilken metode eller kroppsplassering som anvendes. Arketypen er ment for registrering av blodtrykksmåling i alle kliniske scenarier - for eksempel selvmåling med blodtrykksapparat hjemme, akutt måling av det systoliske blodtrykket ved radialispalpasjon og et sfygmomanometer, målinger tatt i kliniske konsultasjoner eller under trening/stresstesting, eller en serie med invasive eller noninvasive målinger i en intensivavdeling.\r\n\r\nArketypen understøtter registrering av målinger tatt under de fleste forhold med hensyn til individets stilling (liggende/sittende/stående osv.), under trening inklusiv kompliserende faktorer som for eksempel vinkelen på leiet i forbindelse med forskning.\r\n\r\nSpesifiserte hendelser er begrenset til gjennomsnittstrykket gjennom en periode på 24 timer, men i templates kan man ved hjelp av \"uspesifisert hendelse\" oppfylle spesifikke krav til blodtrykksmåling, som registrering av blodtrykk på bestemte tidspunkter, serier av målinger, eller over en periode (med eller uten matematiske funksjoner som minimum eller maksimum).",
+          "misuse" : "Anvendes ikke til sentralvenøst trykk. \r\n\r\nAnvendes ikke til måling av arterielle blodtrykk som ikke representerer et systemisk arterielt trykk f.eks spesifikk måling av pulmonalt arterietrykk.\r\n\r\nBruk OBSERVATION.intravascular_pressure og relaterte spesialiseringer i disse situasjonene.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "ja" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "ja"
+          },
+          "purpose" : "個々人の全身における動脈血圧を記録するためのもの。",
+          "keywords" : [ "観察", "測定", "血圧", "バイタルサイン", "平均動脈圧", "脈圧", "収縮期", "拡張期", "RR間隔", "非観血血圧" ],
+          "use" : "測定方法や身体部位を問わず、すべての血圧についての表現を記録するために使用される。このアーキタイプはすべての臨床シナリオを網羅することを目指している。以下に例を挙げる。\r\n- 家庭用血圧計で自己測定した血圧\r\n- 緊急時の評価として触診法で血圧計で測定された収縮期圧\r\n- 臨床上のコンサルテーションや運動負荷テストの間に測定されたもの\r\n- 集中治療において機械的に計測された一連の血圧などである。\r\n患者の体位や運動負荷、交絡因子やティルト台の角度など識別することにより、研究にて計測状態の解釈を手助けする豊富なステートモデルもある。\r\n24時間平均血圧だけが特定のイベントとして名前がつけられているが、テンプレートではデフォルトの「任意のイベント」にさらなる制約を加えることで、特定の時間や間隔を指定したり（数学的機能を追加したり、削除して）、血圧を記録するように、血圧測定に対する特定の要求を行ったイベントを指定することができる。",
+          "misuse" : "たとえば、右肺動脈の血圧を特定の計測を行うように全身循環を表す指標としての代わりとならないような動脈血圧の測定には用いない。このような場合には、OBSERVATION.intravascular_pressureを利用すること。\r\n血管内圧の測定には用いられない。このような場合には、適切に特殊化されたOBSERVATION.intravascular_pressureを利用すること",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fa" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fa"
+          },
+          "purpose" : "ثبت نمودن فشار خون وریدی کل یک فرد",
+          "keywords" : [ "مشاهدات", "اندازه گیری", "فشار خون", "علایم حیاتی", "میانگین فشار وریدی", "فشار نبض", "سیستولیک", "دیاستولیک", "تنفسهای سریع", "فشار خون غیر تهاجمی" ],
+          "use" : "برای ثبت هر چیز نشاندهنده اندازه گیری فشاره خون وریدی کل، جدا از ابنکه برای ثبت آن از چه شیوه ای یا کدام بخش از بدن استفاده شده باشد، بکار می رود. این الگوساز برای گردآوری اندازه گیری فشار خون در همه سناریوهای بالینی طراحی شده است، مانند اندازه گیری توسط خود فرد بوسیله دستگاه فشار خون خانگی، ارزیابی اورژانسی سیستولیک با لمس نبض و یک \"فشارسنج خون\"، اندازه گیریهای انجام گرفته در مشاوره بالینی یا حین تست ورزشی، و یا یک رشته از اندازه گیریهای دستگاه مراقبت های ویژه.\r\nمدل حالت توانمندی وجود دارد که تفسیر اندازه گیری ها را از طریق شناسایی موقعیت بیمار، ورزش، فاکتورهای مبهم و تست تخت شیبدار، پشتیبانی می کند.\r\nرویدادهای نام گذاری شده بگونه ای محدود شده اند که روی یک دوره 24 ساعته میانگین گیری کنند هر چند که الگو ها می توانند پیش فرض -هر گونه  رویداد- را برای فراهم کردن خواسته های خاص از اندازه گیری فشار خون، با محدودیتهایی نظیر ثبت فشار خون سر وقت یا روی رنجی از فاصله های زمانی (با عمل جمع یا منها)، بیشتر محدود کنند \r\n",
+          "misuse" : "برای فشار داخل وریدی استفاده نشود.\r\nبرای اندازه گیری فشار خون وریدی نباید استفاده شود که جایگزینی برای فشار وریدی در گردش خون کلی نیست، بعنوان مثال اندازه گیری خاص فشار وریدی ریه راست.\r\n\r\n و تخصص های مربوطه برای موارد بالا بکار رود\"OBSERVATION.intravascular_pressure\"\r\n \r\n",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nl" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nl"
+          },
+          "purpose" : "Het registreren van de systemische arteriële bloeddruk van een individu.",
+          "keywords" : [ "observaties", "meting", "blddr", "vitale functies", "gemiddelde arteriële druk", "polsdruk", "systolisch", "diastolisch", "RR", "NIBP", "tensie" ],
+          "use" : "Wordt gebruikt om alle weergaven van de systemische bloeddruk te registreren, ongeacht welke methode of welke lichaamslocatie is gebruikt om de meting te doen. \r\n\r\nHet archetype is bedoeld om bloeddruk metingen in alle klinische scenario's vast te leggen - bijvoorbeeld:\r\n- zelf-meting met een thuis bloeddrukmeter; \r\n- een nood beoordeling van de systolische bloeddruk met behulp van palpatie en een drukmanchet; \r\n- metingen tijdens consulten, overleg of tijdens inspannings stress testen, en \r\n- een reeks van metingen die door een apparaat zijn gedaan in de intensieve zorg.\r\n\r\nEr is een uitgebreid status model dat interpretatie van metingen ondersteunt, door patiënt positie, inspanning, beïnvloedende factoren en de hoek/het aantal graden waarin de onderzoekstafel staat, te specificeren.\r\n\r\nGenoemde gebeurtenissen zijn gelimiteerd tot een gemiddelde over een periode van 24 uur, maar templates kunnen de standaard 'iedere gebeurtenis' verder vernauwen om specifieke eisen voor de bloeddrukmeting, zoals registreren van de bloeddruk op een specifiek tijdsmoment, of over een reeks van intervallen (+/- statistisch gebruik) te faciliteren.\r\n",
+          "misuse" : "Niet te gebruiken voor de meting van de arteriële bloeddruk welke geen surrogaat is voor de arteriële druk in de systemische circulatie, bv de specifieke meting van de rechter arterie pulmonalis druk.\r\nGebruik OBSERVATION.intravascular_pressure in deze situatie.\r\n\r\nNiet te gebruiken voor intraveneuze druk. Gebruik een van de OBSERVATION.intravascular_pressure specialisaties in deze situatie.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "ca" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "ca"
+          },
+          "purpose" : "Registrar la pressió arterial d'un pacient.",
+          "keywords" : [ "observacions", "mesura", "pressió arterial", "signes vitals", "pressió arterial mitjana", "pressió de pols", "sistòlica", "diastòlica", "freqüència respiratòria", "pressió arterial no invasiva" ],
+          "use" : "Utilitzar per a registrar totes les representacions de la mesura sistemàtica de la pressió arterial, independentment del mètode o la part del cos que s'utilitzi per registrar-la. \r\n\r\nL'arquetip està destinat a capturar mesures de la pressió arterial en tots els escenaris clínics, per exemple: \r\n\r\n- automedició amb un tensiòmetre domèstic; \r\n\r\n- avaluació d'emergència de la pressió arterial sistòlica mitjançant la palpitació i un esfigmomanòmetre; \r\n\r\n- mesures preses en consultes clíniques o durant proves d'esforç físic; i\r\n\r\n- mesures realitzades per una màquina a la Unitat de Cures Intensives.",
+          "misuse" : "No utilitzar per a registrar la mesura de la pressió arterial que NO sigui substituta de la pressió arterial de la circulació sistemàtica. Per exemple, una mesura específica de la pressió de l'artèria pulmonar dreta. Utilitzar OBSERVATION.intravascular_pressure en aquesta situació. \r\n\r\n No utilitzar per registrar mesures de pressió intravenosa. Utilitzar les especialitzacions apropiades de OBSERVATION.intravascular_pressure en aquesta situació.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.blood_pressure.v2",
     "differential" : true,
@@ -571,28 +848,6 @@
               "nodeId" : "at1042.1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "data",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "ITEM_TREE",
-                  "nodeId" : "at0003.2",
-                  "targetPath" : "/data[at0001]/events[at0006]/data[at0003.1]",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ]
-                } ]
-              }, {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "state",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "ITEM_TREE",
-                  "nodeId" : "at0007.2",
-                  "targetPath" : "/data[at0001]/events[at0006]/state[at0007.1]",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ]
-                } ]
-              }, {
-                "@type" : "C_ATTRIBUTE",
                 "rmAttributeName" : "math_function",
                 "children" : [ {
                   "@type" : "C_COMPLEX_OBJECT",
@@ -603,6 +858,7 @@
                     "children" : [ {
                       "@type" : "C_TERMINOLOGY_CODE",
                       "rmTypeName" : "TERMINOLOGY_CODE",
+                      "occurrences" : "1..1",
                       "terminologyId" : {
                         "value" : "openehr"
                       },
@@ -634,6 +890,28 @@
                       } ]
                     } ]
                   } ],
+                  "attributeTuples" : [ ]
+                } ]
+              }, {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "data",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ITEM_TREE",
+                  "nodeId" : "at0003.2",
+                  "targetPath" : "/data[at0001]/events[at0006]/data[at0003.1]",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              }, {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "state",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ITEM_TREE",
+                  "nodeId" : "at0007.2",
+                  "targetPath" : "/data[at0001]/events[at0006]/state[at0007.1]",
+                  "attributes" : [ ],
                   "attributeTuples" : [ ]
                 } ]
               } ],
@@ -681,6 +959,41 @@
                   "@type" : "C_COMPLEX_OBJECT",
                   "rmTypeName" : "DV_TEXT",
                   "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "nodeId" : "at1035.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "defaultValue" : {
+                    "defining_code" : {
+                      "code_string" : "at1039",
+                      "@type" : "CODE_PHRASE"
+                    },
+                    "@type" : "DV_CODED_TEXT"
+                  },
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "defining_code",
+                    "children" : [ {
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "rmTypeName" : "TERMINOLOGY_CODE",
+                      "occurrences" : "1..1",
+                      "terminologyId" : {
+                        "value" : "local"
+                      },
+                      "constraint" : [ "ac0.14" ],
+                      "selectedTerminologies" : [ ]
+                    } ]
+                  } ],
                   "attributeTuples" : [ ]
                 } ]
               } ],
@@ -764,6 +1077,12 @@
             "text" : "(Synthesized)",
             "code" : "ac0.13",
             "description" : ""
+          },
+          "ac0.14" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.14",
+            "description" : ""
           }
         },
         "ja" : {
@@ -783,6 +1102,12 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.13",
+            "description" : ""
+          },
+          "ac0.14" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.14",
             "description" : ""
           }
         },
@@ -804,6 +1129,12 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.13",
             "description" : ""
+          },
+          "ac0.14" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.14",
+            "description" : ""
           }
         },
         "zh-cn" : {
@@ -823,6 +1154,12 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.13",
+            "description" : ""
+          },
+          "ac0.14" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.14",
             "description" : ""
           }
         },
@@ -844,6 +1181,12 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.13",
             "description" : ""
+          },
+          "ac0.14" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.14",
+            "description" : ""
           }
         },
         "ru" : {
@@ -863,6 +1206,12 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.13",
+            "description" : ""
+          },
+          "ac0.14" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.14",
             "description" : ""
           }
         },
@@ -884,6 +1233,12 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.13",
             "description" : ""
+          },
+          "ac0.14" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.14",
+            "description" : ""
           }
         },
         "ar-sy" : {
@@ -903,6 +1258,12 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.13",
+            "description" : ""
+          },
+          "ac0.14" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.14",
             "description" : ""
           }
         },
@@ -924,6 +1285,12 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.13",
             "description" : ""
+          },
+          "ac0.14" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.14",
+            "description" : ""
           }
         },
         "pt-br" : {
@@ -943,6 +1310,12 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.13",
+            "description" : ""
+          },
+          "ac0.14" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.14",
             "description" : ""
           }
         },
@@ -964,6 +1337,12 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.13",
             "description" : ""
+          },
+          "ac0.14" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.14",
+            "description" : ""
           }
         },
         "es" : {
@@ -983,6 +1362,12 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.13",
+            "description" : ""
+          },
+          "ac0.14" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.14",
             "description" : ""
           }
         },
@@ -1004,6 +1389,12 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.13",
             "description" : ""
+          },
+          "ac0.14" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.14",
+            "description" : ""
           }
         },
         "sv" : {
@@ -1023,6 +1414,12 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.13",
+            "description" : ""
+          },
+          "ac0.14" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.14",
             "description" : ""
           }
         },
@@ -1044,6 +1441,12 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.13",
             "description" : ""
+          },
+          "ac0.14" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.14",
+            "description" : ""
           }
         },
         "ca" : {
@@ -1064,6 +1467,12 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.13",
             "description" : ""
+          },
+          "ac0.14" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.14",
+            "description" : ""
           }
         },
         "el" : {
@@ -1083,6 +1492,12 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.13",
+            "description" : ""
+          },
+          "ac0.14" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.14",
             "description" : ""
           }
         }
@@ -1158,6 +1573,11 @@
           "@type" : "VALUE_SET",
           "id" : "ac0.13",
           "members" : [ "at1011", "at1012" ]
+        },
+        "ac0.14" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.14",
+          "members" : [ "at1036", "at1037", "at1039", "at1040" ]
         }
       }
     },
@@ -1415,7 +1835,56 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "27606DDC8BC11CD99B544D4C7D992C00"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Dokumentation der Anstrengung/Belastung, der der Patient ausgesetzt ist oder ausgesetzt war.",
+          "keywords" : [ "Übung", "Bewegung", "körperliche Anstrengung", "Belastung", "Belastungsgrad", "Belastungsintensität", "Tätigkeit", "Beschäftigung", "Betätigung", "Kraftanstrengung", "Anstrengung", "Ausübung", "Aktivität", "Maßnahme", "Energie", "Tatkraft", "Kraft" ],
+          "use" : "Zur Dokumentation des Belastungsgrads und der Phase der Belastung (Zeitpunkt) - zur Bereitstellung von Status- und Kontextinformationen innerhalb einer OBSERVATION-Klasse wie z.B. Blutdruckmessung.",
+          "misuse" : "Dient nicht der Dokumentation der eigentlichen Übungen/Aktivitäten und Messungen. Diese sollten in der dafür vorgesehenen OBSERVATION-Klasse erfasst werden.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "Record information about the amount of energy expenditure that has been, or is being, experienced by the patient.",
+          "keywords" : [ "exercise", "work", "exertion", "activity", "energy" ],
+          "use" : "Record information about phase and levels of exertion - to provide state/context information within OBSERVATIONS such as Blood Pressure.",
+          "misuse" : "Not to be used to record actual exercise activities and measurements which should be recorded as OBSERVATIONS in their own right.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "ar-sy" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "ar-sy"
+          },
+          "purpose" : "لتسجيل معلومات حول كمية إنفاق الطاقة التي مر/ أو يمر بها المريض",
+          "keywords" : [ "التمرين", "العمل", "المجهود", "النشاط", "الطاقة" ],
+          "use" : "لتسجيل معلومات حول طور و مستويات المجهود - للإمداد بمعلومات حول السياق/الحالة في داخل الملاحظات مثل ضغط الدم.",
+          "misuse" : "لا يستخدم لتسجيل نشاطات التمرين الفعلي و القياسات التي ينبغي تسجيلها على هيئة ملاحظات منفردة بذاتها",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.level_of_exertion.v0",
     "differential" : true,
@@ -1494,7 +1963,99 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "BC58BFFC64546C661C9BA86F7704ABC7"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Zur Darstellung zusammenfassender Informationen über das individuelle Rauchverhalten von Tabak und tabakhaltigen Produkten.",
+          "keywords" : [ "Tabak", "Zigarette", "Zigarre", "Pfeife", "rauchen", "Raucher", "Zigarillo", "Wasserpfeife", "Shisha", "handgedrehte Zigaretten", "hookah", "Narguileh", "hubble-bubble", "roll-up", "rollie", "kretek", "beedi", "bidi", "Nelkenzigarette" ],
+          "use" : "Zur Darstellung zusammenfassender Informationen über das individuelle Rauchverhalten von Tabak und tabakhaltigen Produkten. \r\n\r\nDieser Archetyp soll genutzt werden, um Informationen über das aktuelle und frühere Rauchverhalten darzustellen.\r\n\r\nDer spezifische Anwendungsbereich dieses Archetyps liegt in der Dokumentation über die Verwendung aller Arten von inhaliertem Tabakrauch aufgrund der damit verbundenen Gesundheitsrisiken durch das direkte Einatmen von Tabak und damit verbundenen Chemikalien. Die Menge an Nikotin und Teer und die Verwendung von Filtern und Additiven wurden für den Kernarchetyp nicht berücksichtigt, könnten aber bei Bedarf in den Episoden-SLOT aufgenommen werden. Bitte beachten Sie, dass der Anwendungsbereich dieses Archetyps keine unbeabsichtigte Exposition gegenüber Tabakrauch umfasst (siehe Missbrauch). \r\n\r\nDer Cluster \"Pro Art\" von Datenelementen ermöglicht die Aufzeichnung von spezifischen Details und Episoden über jede Art von Tabak und kann einmal pro Art wiederholt werden. \r\n\r\nIn vielen Situationen raucht der Einzelne nur eine Art von Tabak, wie z.B. Zigaretten. Werden andere Arten von Tabak geraucht, werden die Details in einer anderen Instanz des Clusters \"Pro Art\" aufgezeichnet.\r\n\r\nDie Entwicklung des zu- und abnehmenden Gebrauchs für jede Art von Tabak im Laufe der Zeit kann mit dem wiederholbaren Cluster \"Pro Episode\" dargestellt werden. Diese Gruppe von Datenelementen ermöglicht es, ein sehr detailliertes Muster des Rauchverhaltens für jede Art von Tabak darzustellen, wie z.B. das tägliche Rauchen von selbstgedrehten Zigaretten, neben dem wöchentlichen Rauchen von Zigarren jeden Freitagabend und dem gelegentlichen Bidi-Rauchen im Urlaub auf Bali. \r\n\r\nAuslöser für das Ende einer Episode und den Beginn einer neuen Episode spiegeln weitgehend die lokalen Datenerfassungspräferenzen wider, einschließlich wenn die Person: \r\n- für einen längeren Zeitraum (der wahrscheinlich lokal definiert wird) das Rauchen aufgibt; oder\r\n- ihre Nutzung oder ihr Rauchverhalten signifikant verändert.\r\n\r\nWenn nur eine Tabakart geraucht wird, ist der Wert für \"Packungsjahre\" identisch mit dem im Datenelement \"Packungsjahre gesamt\". Wenn mehr als eine Tabakart geraucht wird, erfordert die Berechnung des Wertes für \"Packungsjahre gesamt\" einen komplexeren Algorithmus wie http://smokingpackyears.com/.\r\n\r\nDas Datenelemet \"Allgemeine Beschreibung\" wird verwendet, um die Beschreibungen der Tabakrauchgewohnheiten in bestehenden oder älteren klinischen Systemen in ein Archetypenformat zu übertragen.\r\n\r\nAchtung: Die Definition \"Derzeitiger Raucher\" kann variieren. Zum Beispiel: das CDC verwendet einen Monat / 31 Tage als Grenzwert, während es in Neuseeland 28 Tage sind.",
+          "misuse" : "Nicht zur Darstellung von ereignis- oder zeitabhängigen Informationen über das Rauchen, wie z.B. dem tatsächlichen täglichen Gebrauch oder dem durchschnittlichen Gebrauch über einen bestimmten Zeitraum - verwenden Sie den Archetyp OBSERVATION.tobacco_smoking.\r\n\r\nNicht zur Darstellung von Informationen über rauchfreien Tabakkonsum - zum Beispiel: Schnupftabak; Kautabak; Dip; und Gutka. Verwenden Sie dazu den Archetyp EVALUATION.smokeless_tobacco_summary.\r\n\r\nNicht zur Darstellung einer Beurteilung der Zigaretten- oder Nikotinabhängigkeit verwenden. Verwenden Sie dazu den Archetyp OBSERVATION.fagerstrom.\r\n\r\nNicht zur Darstellung von Details über unbeabsichtigte Exposition gegenüber Tabakrauch oder Passivrauchen verwenden. Verwenden Sie dazu den Archetyp EVALUATION.exposure.\r\n\r\nNicht zur Darstellung von anderen Verabreichungen von Nikotin wie e-Zigaretten, Nikotinpflaster oder Nikotinkaugummi. Verwenden sie einen separaten Archetyp für diesen Zweck.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "sv" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "sv"
+          },
+          "purpose" : "Att registrera sammanfattande information om en individs rökvanor gällande tobak och produkter som innehåller tobak.",
+          "keywords" : [ "rökning", "rökanamnes", "tobak", "cigarett", "cigarr", "pipa", "kretek", "bidi", "cigarill", "rökare", "vattenpipa", "shisha", "hookah", "narguileh", "n'arghile", "ghelion", "bong", "rulltobak" ],
+          "use" : "Används för att beskriva sammanfattad information om individens rökvanor gällande tobak och tobaks-innehållande produkter.\r\n\r\nDenna arketyp kan användas för att beskriva både nuvarande och tidigare rökvanor.\r\n\r\nArketypen omfattar dokumentation av rökvanor för alla sorters tobaksbruk där man andas in tobaksröken eftersom det finns specifika hälsorisker associerade till direkt inandning av tobaksrök och tillhörande kemikalier. \r\n\r\nMängden nikotin och tjära, användning av filter och tillsatser har lämnats utanför vad kärnan av arketypen omfattar, men kan t.ex. läggas till (med hjälp av ytterligare arketyper) under rubriken \"Per episod\". \r\n\r\nObservera att denna arketyp inte omfattar oavsiktlig exponering för tobaksrök (se \"Misuse\"/felaktig användning).\r\n\r\nI många fall kommer individen bara röka en typ av tobak, till exempel vanliga cigaretter. Om flera sorters tobaksprodukter röks repeteras \"Per typ\"-clustret på ett sätt som gör det möjligt att registrera specifika detaljer och episoder om varje typ av tobak som röks. Det kan upprepas för varje typ som behöver dokumenteras. \r\n\r\nAtt rökvanor varierar i omfattning och typ av rökning kan fångas med det repeterbara \"Per episod\"-clustret. Detta kluster av dataelement gör det möjligt att beskriva mönster av rökvanor mycket detaljerat för varje typ av tobak som röks, exempelvis daglig rökning av handrullade cigaretter, kombinerat med veckovis cigarrrökning varje fredagskväll och ibland Bidi-rökning på semester på Bali.\r\n\r\nAnledningar för att stänga en episod och starta en ny kommer i hög grad att återspegla lokala datainsamlingspreferenser, inklusive om personen:\r\n- slutar röka under en betydande tidsperiod (vilket sannolikt kommer att vara lokalt definierat) eller\r\n- signifikant ändrar rökmönster eller mängd\r\n\r\nOm endast en typ av tobak rökts, kommer värdet för \"Paketår\" att vara identiskt med värdet för \"Totala paketår\". Om mer än en typ av tobak har rökts så kommer beräkningen för värdet för \"Totala paketår\" att kräva en mer komplex algoritm, exempelvis från http://smokingpackyears.com/.\r\n\r\nFör att införliva beskrivande information (t.ex. fritext) om rökvanor från befintliga eller gamla vård-IT-system till arketyp-baserade system, används lämpligen datafältet \"Övergripande beskrivning\".\r\n\r\nNotera att definitionen av \"rökare\" och \"före detta rökare\" t.ex. kan variera avseende perioder. Exempelvis använder amerikanska CDC 1 månad/31 dagar och nya Zealand använder 28 dagar.",
+          "misuse" : "Använd inte denna arketyp för att registrera specifik händelse- eller periodbaserad information om rökning, till exempel faktisk daglig användning eller genomsnittlig användning under en viss tidsperiod - använd då istället arketypen OBSERVATION.tobacco_smoking\r\n\r\nAnvänd inte denna arketyp för att registrera information om rökfri tobaksanvändning, exempelvis snus, tuggtobak eller gutka - använd då istället arketypen EVALUATION.smokeless_tobacco_summary\r\n\r\nAnvänd inte denna arketyp för att registrera evidens eller bedömning av cigarett- eller nikotinberoende. Använd då istället arketypen OBSERVATION.fagerstrom\r\n\r\nAnvänd inte denna arketyp för att registrera detaljer om oavsiktlig tobaksröksexponering eller passiv rökning. Använd då istället arketypen EVALUATION.exposure.\r\n\r\nAnvänd inte denna arketyp för att registrera annat nikotinbruk, exempelvis e-cigaretter, nikotinplåster eller nikotintuggummi. Använd separata arketyper för de ändamålen.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å registrere et sammendrag om individets mønster for røyking av tobakk og produkter som inneholder tobakk.",
+          "keywords" : [ "tobakk", "sigarett", "sigar", "pipe", "røyking", "kretek", "beedi", "bidi", "sigarillo", "røyker", "vannpipe", "shisha", "hookah", "narguileh", "rulletobakk", "rullings", "røyk" ],
+          "use" : "Brukes for å registrere et sammendrag om individets mønster for røyking av tobakk og produkter som inneholder tobakk.\r\n\r\nDenne arketypen brukes for å registrere både nåværende og tidligere tobakksrøyking.\r\n\r\nArketypen fokuserer spesifikt på dokumentasjon om bruk av alle typer inhalert tobakksrøyk, på grunn av helserisikoen knyttet til inhalering og kjemikaliene tilknyttet dette. Mengden av nikotin og tjære, filterbruk og tilsetningstoffer er ikke dekket av arketypen, men kan legges til i SLOTet \"Episodedetaljer\" ved behov. Arketypen omfatter ikke utilsiktet eksponering for tobakksrøyk (se Feil bruk).\r\n\r\nClusteret \"Per type\" tillater registrering av spesifikke detaljer og episoder om hver enkelt ulik type tobakk som røykes og kan repeteres en gang per type. \r\n\r\nI mange tilfeller vil individet bare røyke en type tobakk, for eksempel filtersigaretter. Røykes også andre typer tobakk, legges detaljene om dette i en annen instans av Clusteret \"Per type\".\r\n\r\nHistorikken knyttet til økt eller redusert bruk av hver enkelt tobakkstype over tid kan registreres ved å bruke Clusteret \"Per episode\". Denne samlingen av dataelementer åpner for en veldig detaljert registrering av røykeadferd, for eksempel kan en registrere at man daglig røyker rullings, en sigar hver fredag og Bidi-røyking når man er på ferie på Bali.\r\n\r\nHva som trigger en avslutning av en episode og start av en ny avhenger av behovet, for eksempel:\r\n- Individet slutter å røyke en periode (kan defineres lokalt).\r\n- Betydningsfulle endringer i mengde eller røykemønster.\r\n\r\nRøyker individet kun en type tobakk vil verdien for dataelementet \"Pakkeår\" være identisk med dataelementet \"Overordnet pakkeår\". Røykes mer enn en type tobakk vil kalkulasjonen av verdien for \"Overordnet pakkeår\" kreve en mer kompleks algoritme som http://smokingpackyears.com/.\r\n\r\nDataelementet \"Overordnet beskrivelse\" brukes til å overføre fritekstbeskrivelser fra eksisterende eller tidligere kliniske systemer til arketypeformat.\r\n\r\nMerk: Definisjon av verdien \"Røyker\" i dataelementet \"Status\" kan variere fra land til land. For eksempel refererer USAs Center for Disease Control til røyking den siste måneden, og New Zealand Ministry of Health til røyking i løpet av de siste 28 dagene.",
+          "misuse" : "Brukes ikke for å registrere informasjon som ikke handler om tobakksrøyking eller som handler om tobakk blandet med andre rusmidler, bruk egne arketyper for dette formålet.\r\n\r\nBrukes ikke for å registrere hendelses- eller periodisk informasjon om tobakksrøyking, for eksempel: faktisk daglig bruk eller gjennomsnittlig bruk over en spesifisert tidsperiode. Bruk arketypen OBSERVATION.tobacco_smoking for dette formålet.\r\n\r\nBrukes ikke for å registrere informasjon om bruk av røykfri tobakk, for eksempel snus, luktsnus/snuff, tyggetobakk, dip og gutka. Bruk arketypen EVALUATION.smokeless_tobacco_summary for dette formålet.\r\n\r\nBrukes ikke for å registrere informasjon om nikotinavhengighet. Bruk arketypen OBSERVATION.fagerstrom til dette formålet.\r\n\r\nBrukes ikke for å registrere detaljer om passiv røyking. Bruk arketypen EVALUATION.exposure for dette formålet.\r\n\r\nBrukes heller ikke for annen tilførsel av nikotin som e-sigarett, nikotinplaster eller niktotintyggegummi. Bruk egne arketyper for dette formålet.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record summary information about the individual's pattern of smoking of tobacco and tobacco-containing products.",
+          "keywords" : [ "tobacco", "cigarette", "cigar", "pipe", "smoking", "kretek", "beedi", "bidi", "cigarillo", "smoker", "waterpipe", "shisha", "hookah", "narguileh", "hubble-bubble", "roll-up", "RYO", "rollie", "roll-your-own" ],
+          "use" : "Use to record summary information about the individual's pattern of smoking of tobacco and tobacco-containing products.\r\n\r\nThis archetype is to be used to record information about both current and previous smoking behaviour.\r\n\r\nThe specific scope of this archetype is on documentation about the use of all types of inhaled tobacco smoke because of the associated health risks from direct inhalation of tobacco and associated chemicals. Amount of nicotine and tar, use of filters and additives has been left outside of scope for the core archetype, but could be added into the Episode SLOT if required. Please note that the scope of this archetype does not include unintentional exposure to tobacco smoke (see Misuse). \r\n\r\nThe 'Per type' cluster of data elements allows for recording of specific details and episodes about each type of tobacco smoked and can be repeated once per type.\r\n\r\nIn many situations the individual will only smoke one type of tobacco, such as manufactured cigarettes.  If other types of tobacco are smoked, the details will be recorded in another instance of the 'Per type' cluster.\r\n\r\nThe history of waxing and waning of use for each type of tobacco over time can be captured using the repeatable 'Per episode' cluster. This cluster of data elements allows for a very detailed pattern of smoking behaviour to be recorded for each type of tobacco smoked such as daily 'roll-your-own' cigarette smoking, alongside weekly cigar smoking every Friday night and occasional Bidi smoking while on holiday in Bali. \r\n\r\nTriggers for closing one episode and commencing a new one will largely reflect local data collection preferences, including if the individual: \r\n- quits for a significant period of time (which will likely be locally defined); or\r\n- significantly changes their amount of use or pattern of their smoking.\r\n\r\nIf only one type of tobacco is smoked, the value for 'Pack years' will be identical to the 'Overall pack years' data element. If more than one type of tobacco is smoked, the calculation for the value for 'Overall pack years' will require a more complex algorithm such as http://smokingpackyears.com/.\r\n\r\nUse to incorporate the narrative descriptions of tobacco smoking habits within existing or legacy clinical systems into an archetyped format, using the 'Overall description' data element.\r\n\r\nNote: Definitions of 'Current smoker' may vary. For example: the CDC uses 1 month/31 days and New Zealand uses 28 days.",
+          "misuse" : "Not to be used to record event-or period-based information about tobacco smoking, such as actual daily use or the average use over a specified period of time - use the OBSERVATION.tobacco_smoking archetype.\r\n\r\nNot to be used to record information about smokeless tobacco use - for example: snus; snuff; chewing tobacco; dip; and gutka. Use the archetype EVALUATION.smokeless_tobacco_summary archetype for this purpose.\r\n\r\nNot to be used to record evidence of nicotine dependency. Use the OBSERVATION.fagerstrom for this purpose.\r\n\r\nNot to be used to record details about unintended exposure to tobacco smoke or passive smoking. Use the archetype EVALUATION.exposure for this purpose.\r\n\r\nNot to be used for recording any other administration of nicotine, such as e-cigarettes, nicotine patches or nicotine chewing gum. Use separate archetypes for this purpose.",
+          "copyright" : "© openEHR Foundation, Australian Digital Health Agency, openEHR Norway",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fr" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fr"
+          },
+          "purpose" : "*To record summary information about the individual's pattern of smoking of tobacco and tobacco-containing products.(en)",
+          "keywords" : [ "le tabac", "cigarette", "cigare", "tuyau", "fumeur", "kretek", "beedi", "bidi", "cigarillo", "fumeur", "conduite d'eau", "chicha", "narguilé", "narguileh", "hubble-bubble", "enrouler", "RYO", "Rollie", "roule toi-même" ],
+          "use" : "*Use to record summary information about the individual's pattern of smoking of tobacco and tobacco-containing products.\r\n\r\nThis archetype is to be used to record information about both current and previous smoking behaviour.\r\n\r\nThe specific scope of this archetype is on documentation about the use of all types of inhaled tobacco smoke because of the associated health risks from direct inhalation of tobacco and associated chemicals. Amount of nicotine and tar, use of filters and additives has been left outside of scope for the core archetype, but could be added into the Episode SLOT if required. Please note that the scope of this archetype does not include unintentional exposure to tobacco smoke (see Misuse). \r\n\r\nThe 'Per type' cluster of data elements allows for recording of specific details and episodes about each type of tobacco smoked and can be repeated once per type.\r\n\r\nIn many situations the individual will only smoke one type of tobacco, such as manufactured cigarettes. If other types of tobacco are smoked, the details will be recorded in another instance of the 'Per type' cluster.\r\n\r\nThe history of waxing and waning of use for each type of tobacco over time can be captured using the repeatable 'Per episode' cluster. This cluster of data elements allows for a very detailed pattern of smoking behaviour to be recorded for each type of tobacco smoked such as daily 'roll-your-own' cigarette smoking, alongside weekly cigar smoking every Friday night and occasional Bidi smoking while on holiday in Bali. \r\n\r\nTriggers for closing one episode and commencing a new one will largely reflect local data collection preferences, including if the individual: \r\n- quits for a significant period of time (which will likely be locally defined); or\r\n- significantly changes their amount of use or pattern of their smoking.\r\n\r\nIf only one type of tobacco is smoked, the value for 'Pack years' will be identical to the 'Overall pack years' data element. If more than one type of tobacco is smoked, the calculation for the value for 'Overall pack years' will require a more complex algorithm such as http://smokingpackyears.com/.\r\n\r\nUse to incorporate the narrative descriptions of tobacco smoking habits within existing or legacy clinical systems into an archetyped format, using the 'Overall description' data element.\r\n\r\nNote: Definitions of 'Current smoker' may vary. For example: the CDC uses 1 month/31 days and New Zealand uses 28 days.(en)",
+          "misuse" : "*Not to be used to record event-or period-based information about tobacco smoking, such as actual daily use or the average use over a specified period of time - use the OBSERVATION.tobacco_smoking archetype.\r\n\r\nNot to be used to record information about smokeless tobacco use - for example: snus; snuff; chewing tobacco; dip; and gutka. Use the archetype EVALUATION.smokeless_tobacco_summary archetype for this purpose.\r\n\r\nNot to be used to record evidence of nicotine dependency. Use the OBSERVATION.fagerstrom for this purpose.\r\n\r\nNot to be used to record details about unintended exposure to tobacco smoke or passive smoking. Use the archetype EVALUATION.exposure for this purpose.\r\n\r\nNot to be used for recording any other administration of nicotine, such as e-cigarettes, nicotine patches or nicotine chewing gum. Use separate archetypes for this purpose.(en)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nl" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nl"
+          },
+          "purpose" : "Voor het vastleggen van samenvattende informatie over een individu's gedrag in het roken van tabak en tabak-bevattende producten.",
+          "keywords" : [ "tabak", "sigaretten", "sigaar", "pijp", "roken", "kretek", "beedi", "bidi", "cigarillo", "roker", "waterpijp", "shisha", "hookah", "narguileh", "hubble-bubble", "roll-up", "sjek", "roltabak", "shag" ],
+          "use" : "Gebruik voor het vastleggen van samenvattende informatie over een individu's gedrag in het roken van tabak en tabak-bevattende producten.\r\n\r\nDit archetype dient gebruikt te worden om informatie over zowel het huidige als het voormalige rookgedrag vast te leggen.\r\n\r\nDe strekking van dit archetype is het vastleggen van het gebruik van alle typen geïnhaleerde tabaksrook in verband met de bijgaande gezondheidsrisico's bij het direct inademen van tabak en aanverwante chemicaliën. Hoeveelheid nicotine en teer, gebruik van filters en toevoegingen zijn buiten de scope van dit kernarchetype, maar kunnen in het Episode SLOT toegevoegd worden indien nodig. Merk op dat dit archetype onbedoelde blootstelling aan tabaksrook buiten beschouwing laat (zie Misuse).\r\n\r\nHet 'Per type' cluster met data elementen staat het vastleggen van specifieke details en episodes over ieder type tabak toe, en kan herhaald worden voor ieder type.\r\n\r\nIn veel gevallen rookt een individu maar één type tabak, zoals bijvoorbeeld gefabriceerde sigaretten. Als andere typen tabak worden gerookt, zullen de details hiervan vastgelegd worden in een andere instantie van het 'Per type' cluster.\r\n\r\nDe geschiedenis van toename en afname van het gebruik van elk type tabak door de tijd heen kan vastgelegd worden door het herhaalbare 'Per episode' cluster te gebruiken. Dit cluster met data elementen staat toe om een zeer gedetaileerd patroon van rookgedrag vast te leggen voor elk type tabak. Bijvoorbeeld dagelijkse 'roll-your-own' sigaretten, in combinatie met weekelijks sigaarroken op vrijdagavond en het af-en-toe roken van een Bidi gedurende vakantie op Bali.\r\n\r\nHet sluiten van een episode en starten van een nieuwe episode hangt af van hoe men lokaal de data wenst te verzamelen, en of het individu:\r\n- voor een significante tijd gestopt is (waarbij de definitie lokaal vastgesteld is); of\r\n- significante veranderingen in het patroon of de hoeveelheid van het rookgedrag vertoont.\r\n\r\nAls er maar één type tabak gerookt wordt, dan is de waarde voor 'Packyears' gelijk aan de waarde voor het 'Totaal aantal packyears' data element. Als meerdere typen tabak gerookt zijn, dan vereist de 'Totaal aantal packyears' berekening een complexer algoritme zoals beschreven op http://smokingpackyears.com/.\r\n\r\nGebruik om de aanvullende beschrijvingen van tabak rookgedrag in bestaande of legacy klinische systemen in een archetype-formaat te vatten doormiddel van het 'Algemene beschrijving' data element.\r\n\r\nNoot: de definitie van 'huidige roker' kan veriëren. Bijvoorbeeld, het CDC gebruikt 1 maand/31 dagen, terwijl men in Nieuw Zeeland 28 dagen hanteert.",
+          "misuse" : "Niet te gebruiken voor het vastleggen van gebeurtenis- of periode-gebasseerde informatie over het roken van tabak, zoals de daadwerkelijke dagelijkse dosis of het gemiddelde gebruik over een bepaalde periode - gebruik hiervoor het OBSERVATION.tobacco_smoking archetype.\r\n\r\nNiet te gebruiken voor het vastleggen van informatie over het gebruik van rookloos tabak - zoals bijvoorbeeld: snus; snuiftabak; pruimtabak; dip; and gutka. Gebruik hiervoor het archetype EVALUATION.smokeless_tobacco_summary.\r\n\r\nNiet te gebruiken voor het vastleggen van bewijs voor nicotineafhankelijkheid. Gebruik hiervoor het archetype OBSERVATION.fagerstrom.\r\n\r\nNiet te gebruiken voor het vastleggen van onbedoelde blootstelling aan tabaksrook of passief roken. Gebruik hiervoor het archetype EVALUATION.exposure.\r\n\r\nNiet te gebruiken voor het vastleggen van enige andere vorm van toediening van nicotine, zoals e-cigaretten, nicotine pleisters of nicotine kauwgom. Gebruik hiervoor losstaande archetypes.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-EVALUATION.tobacco_smoking_summary.v2",
     "differential" : true,
@@ -1521,32 +2082,14 @@
               "rmTypeName" : "ELEMENT",
               "occurrences" : "0..0",
               "nodeId" : "at0015.1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "value",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_DATE",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
+              "attributes" : [ ],
               "attributeTuples" : [ ]
             }, {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
               "occurrences" : "0..0",
               "nodeId" : "at0080.1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "value",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_DATE",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
+              "attributes" : [ ],
               "attributeTuples" : [ ]
             }, {
               "@type" : "C_COMPLEX_OBJECT",
@@ -1568,16 +2111,7 @@
                   "rmTypeName" : "ELEMENT",
                   "occurrences" : "0..0",
                   "nodeId" : "at0014.1",
-                  "attributes" : [ {
-                    "@type" : "C_ATTRIBUTE",
-                    "rmAttributeName" : "value",
-                    "children" : [ {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "DV_DATE",
-                      "attributes" : [ ],
-                      "attributeTuples" : [ ]
-                    } ]
-                  } ],
+                  "attributes" : [ ],
                   "attributeTuples" : [ ]
                 }, {
                   "@type" : "C_COMPLEX_OBJECT",
@@ -1625,16 +2159,7 @@
               "rmTypeName" : "ELEMENT",
               "occurrences" : "0..0",
               "nodeId" : "at0016.1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "value",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_DATE",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
+              "attributes" : [ ],
               "attributeTuples" : [ ]
             }, {
               "@type" : "C_COMPLEX_OBJECT",
@@ -1950,16 +2475,7 @@
               "rmTypeName" : "ELEMENT",
               "occurrences" : "0..0",
               "nodeId" : "at0022.1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "value",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_DATE_TIME",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
+              "attributes" : [ ],
               "attributeTuples" : [ ]
             } ]
           } ],
@@ -2080,7 +2596,54 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "40D74C51FC9BEC1910251F7FC695602B"
       },
-      "details" : { }
+      "details" : {
+        "sv" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "sv"
+          },
+          "purpose" : "Sammanfattande eller beständig information om en individs snusande eller annat rökfritt tobaksbruk.",
+          "keywords" : [ "tobak", "snus", "luktsnus", "snuff", "tuggtobak", "dopptobak", "dip", "gutka", "iqmik", "naswar", "toombak", "shammah", "mawa", "gadakhu", "habit", "babul", "zarda", "dokta", "paan", "pan", "khilli", "pan masala", "dohra", "tombol", "sada pata", "chadha", "kapoori", "manipuri", "twist", "niswar", "nass", "nasway", "nasvay", "sute", "ammari", "saood", "sauté", "gudakhu", "kiwam", "mishri", "gul", "tuibur", "hidakpha", "hsaypaung yay", "chaw" ],
+          "use" : "Används för att beskriva sammanfattad information om individens användning av rökfria tobaks-innehållande produkter, exempelvis snus.\r\n\r\nDenna arketyp kan användas för att beskriva både nuvarande och tidigare användning av rökfri tobak.\r\n\r\nArketypen omfattar användningen av alla typer av rökfri tobak på grund av de tillhörande hälsoriskerna. Detaljer om nikotinmängd och tillsatser har lämnats utanför arketypen, men kan läggas till (med hjälp av ytterligare arketyper) under \"episoddetaljer\" om det behövs.\r\n\r\n\"Per typ\"-avsnittet kan repeteras en gång per typ och ger möjlighet att registrera specifika detaljer och episoder om varje typ. Ofta använder individer bara en sorts rökfri tobak, exempelvis snus. Om flera typer av rökfri tobak används så registreras de uppgifterna i andra instanser av \"Per typ\"-avsnittet.\r\n\r\nAtt bruket av en typ av rökfri tobak varierar i omfattning över tid kan fångas med det repeterbara \"Per episod\"-avsnittet. Detta avsnitt gör det möjligt att registrera ett mycket detaljerat mönster för användningen av tobak för varje typ av tobak som används, såsom daglig användning av snus, lika väl som tillfällig användning av tuggtobak på semestern.\r\n\r\nAnledningar för att avsluta en episod och starta en ny kommer vanligen återspegla lokala datainsamlingspreferenser, inklusive om individen:\r\n- slutar användningen under en betydande tidsperiod (vilket sannolikt kommer att vara lokalt definierat) eller\r\n- signifikant ändrar användningsmönster eller mängd\r\n\r\nFör att registrera beskrivande information (t.ex. fritext) om rökfritt tobaksbruk från befintliga eller gamla vård-IT-system i arketyp-baserade system, används lämpligen dataelementet \"Övergripande beskrivning\".",
+          "misuse" : "Använd inte för att registrera specifik konsumtion av nikotin - exempelvis plåster, tuggummi, spray och pulver - eller e-cigaretter. Använd separata arketyper för dessa ändamål.\r\n\r\nAnvänd inte för att registrera information om tobaksrökning. Använd istället arketypen EVALUATION.tobacco_smoking_summary för det ändamålet.\r\n\r\nAnvänd inte för att inte registrera händelse- eller periodbaserad information om användning av rökfri tobak, till exempel faktisk daglig användningen eller genomsnittlig användning under en viss tidsperiod, använd då i istället arketypen OBSERVATION.smokeless_tobacco (ännu inte utvecklad).",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å registrere et sammendrag eller varig (persistent) informasjon om individets bruk av røykfri tobakk.",
+          "keywords" : [ "tobakk", "snus", "snuff", "tygge", "dip", "gutka", "skrå", "iqmik", "naswar", "toombak", "shammah", "mawa", "gadakhu", "habit", "babul", "zarda", "dokta", "paan", "pan", "khilli", "pan masala", "dohra", "tombol", "sada pata", "chadha", "kapoori", "manipuri", "Twist", "niswar", "nass", "nasway", "nasvay", "sute", "ammari", "saood", "sauté", "gudakhu", "kiwam", "mishri", "gul", "tuibur", "hidakpha", "hsaypaung yay", "chaw" ],
+          "use" : "Brukes for å registrere sammendrag eller varig (persistent) informasjon om individets bruk av røykfri tobakk.\r\n\r\nDenne arketypen brukes for å registrere både nåværende og tidligere bruk av røykfri tobakk.\r\n\r\nArketypen fokuserer spesifikt på bruken av alle typer røykfri tobakk, på grunn av helserisikoen knyttet til dette. Mengden av nikotin samt bruk av poser og tilsetningstoffer er ikke dekket av arketypen, men kan legges til i SLOTet \"Typedetaljer\" ved behov. \r\n\r\nClusteret \"Per type\" tillater registrering av spesifikke detaljer og episoder om hver enkelt ulik type røykfri tobakk som brukes og kan repeteres en gang per type.\r\n\r\nI mange tilfeller vil individet bare bruke en type røykfri tobakk, for eksempel snus eller snuff. Brukes også andre typer røykfri tobakk, legges detaljene om dette i en annen instans av Clusteret \"Per type\".\r\n\r\nHistorikken knyttet til økt eller redusert bruk av hver enkelt tobakkstype over tid kan registreres ved å bruke Clusteret \"Per episode\". Denne samlingen av dataelementer åpner for en veldig detaljert registrering av bruken av røykfri tobakk, for eksempel kan en registrere at man daglig bruker snus, i tillegg til sporadisk bruk av tyggetobakk når man er på ferie.\r\n\r\nHva som trigger en avslutning av en episode og start av en ny avhenger av behovet, for eksempel:\r\n- Individet slutter å bruke røykfri tobakk en periode (kan defineres lokalt).\r\n- Betydningsfulle endringer i mengde eller bruksmønster.\r\n\r\nDataelementet \"Overordnet beskrivelse\" brukes til å overføre fritekstbeskrivelser fra eksisterende eller tidligere kliniske systemer til arketypeformat.",
+          "misuse" : "Brukes ikke for å registrere hendelses- eller periodisk informasjon om bruk av røykfri tobakk, for eksempel: faktisk daglig bruk eller gjennomsnittlig bruk over en spesifisert tidsperiode. Bruk arketypen OBSERVATION.smokeless_tobacco (ikke utviklet enda) for dette formålet.\r\n\r\nBrukes ikke for å registrere annen tilførsel av nikotin som e-sigarett, nikotinplaster, nikotinspray, nikotin munnpulver eller niktotintyggegummi. Bruk egne arketyper for dette formålet.\r\n\r\nBrukes ikke for å registrere informasjon om tobakksrøyking. Bruk arketypen EVALUATION.tobacco_smoking_summary for dette formålet.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To record summary or persistent information about smokeless tobacco use by an individual.",
+          "keywords" : [ "tobacco", "snus", "snuff", "dip", "gutka", "iqmik", "naswar", "toombak", "shammah", "mawa", "gadakhu", "habit", "babul", "zarda", "dokta", "paan", "pan", "khilli", "pan masala", "dohra", "tombol", "sada pata", "chadha", "kapoori", "manipuri", "twist", "niswar", "nass", "nasway", "nasvay", "sute", "ammari", "saood", "sauté", "gudakhu", "kiwam", "mishri", "gul", "tuibur", "hidakpha", "hsaypaung yay", "chaw", "chewing", "oral", "spitting" ],
+          "use" : "Use to record summary or persistent information about smokeless tobacco use by an individual. \r\n\r\nThis archetype is to be used to record information about both current and previous use of smokeless tobacco.\r\n\r\nThe specific scope of this archetype includes the use of all types of smokeless tobacco because of the associated health risks. Amount of nicotine, as well as use of bags and additives has been left outside of scope for the core archetype, but could be added into the 'Type details' SLOT if required. \r\n\r\nThe 'Per type' cluster of data elements allows for recording of specific details and episodes about each type of tobacco used and can be repeated once per type.\r\n\r\nIn many situations the individual will only use one type of smokeless tobacco, such as snus or snuff. If other types of tobacco are used the details will be recorded in another instance of the 'Per type' cluster.\r\n\r\nThe history of varying use for each type of tobacco over time can be captured using the repeatable 'Per episode' cluster. This cluster of data elements allows for a very detailed pattern of tobacco usage behaviour to be recorded for each type of tobacco used such as daily usage of snus, alongside occasional use of chewing tobacco while on holiday. \r\n\r\nTriggers for closing one episode and commencing a new one will largely reflect local data collection preferences, including if the individual: \r\n- quits for a significant period of time (which will likely be locally defined); or\r\n- significantly changes their amount of use or pattern of their usage.\r\n\r\nTo incorporate narrative descriptions of smokeless tobacco usage habits within existing or legacy clinical systems into an archetyped format, use the 'Overall description' data element.",
+          "misuse" : "Not to be used to record event-or period-based information about usage of smokeless tobacco, such as actual daily use or the average use over a specified period of time - use the OBSERVATION.smokeless_tobacco archetype (not yet developed).\r\n\r\nNot to be used for recording specific consumption of nicotine - including patches, chewing gum, spray and powder - or e-cigarettes. Use separate archetypes for this purpose. \r\n\r\nNot to be used to record information about tobacco smoking. Use the EVALUATION.tobacco_smoking_summary archetype for this purpose.",
+          "copyright" : "© openEHR Foundation, openEHR Norway",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-EVALUATION.smokeless_tobacco_summary.v1",
     "differential" : true,
@@ -2107,32 +2670,14 @@
               "rmTypeName" : "ELEMENT",
               "occurrences" : "0..0",
               "nodeId" : "at0015.1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "value",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_DATE",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
+              "attributes" : [ ],
               "attributeTuples" : [ ]
             }, {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "ELEMENT",
               "occurrences" : "0..0",
               "nodeId" : "at0080.1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "value",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_DATE",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
+              "attributes" : [ ],
               "attributeTuples" : [ ]
             }, {
               "@type" : "C_COMPLEX_OBJECT",
@@ -2146,16 +2691,7 @@
               "rmTypeName" : "ELEMENT",
               "occurrences" : "0..0",
               "nodeId" : "at0016.1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "value",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_DATE",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
+              "attributes" : [ ],
               "attributeTuples" : [ ]
             }, {
               "@type" : "C_COMPLEX_OBJECT",
@@ -2437,16 +2973,7 @@
               "rmTypeName" : "ELEMENT",
               "occurrences" : "0..0",
               "nodeId" : "at0022.1",
-              "attributes" : [ {
-                "@type" : "C_ATTRIBUTE",
-                "rmAttributeName" : "value",
-                "children" : [ {
-                  "@type" : "C_COMPLEX_OBJECT",
-                  "rmTypeName" : "DV_DATE_TIME",
-                  "attributes" : [ ],
-                  "attributeTuples" : [ ]
-                } ]
-              } ],
+              "attributes" : [ ],
               "attributeTuples" : [ ]
             } ]
           } ],
@@ -2522,7 +3049,101 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "189016652B796FD2552171C762A5602E"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Schaffung von Rahmenbedingungen für die Darstellung von Antworten auf vordefinierte Screening-Fragen zur Anwendung eines bestimmten Medikaments oder einer Medikamentengruppe.",
+          "keywords" : [ "Medikation, Screening, Fragebogen, Medikament, Arzneimittel, Behandlung" ],
+          "use" : "Verwendung als Rahmenbedingung für die Darstellung von Antworten auf vordefinierte Screening-Fragen zur Anwendung eines bestimmten Medikaments oder einer Medikamentengruppe (einschließliche Medikamentenkasse).\r\n\r\nBeispiele für Medikamente, Gruppierungen und Klassen von Medikamenten sind „Alendronsäure“, „Osteoporose-Medikamente“ bzw. „Bisphosphonate“.\r\n\r\nHäufige Anwendungsfälle umfassen, sind aber nicht beschränkt auf:\r\n- Systematische Befragung in jedem Beratungsgespräch zu dem Medikamenteneinnahme-Verhalten, zum Beispiel:\r\n--- Verwenden Sie Paracetamol? Ja, Nein, Unbekannt.\r\n--- Haben Sie in den letzten vier Wochen Antikoagulanzien verwendet? Ja, Nein, Unbekannt.\r\n\r\nDie Semantik dieses Archetyps ist absichtlich locker, und die Abfrage dieses Archetyps wäre normalerweise nur im Kontext jedes spezifischen Templates nützlich oder sicher. In einem Template würde normalerweise jedes Datenelement in die spezifische gestellte Frage umbenannt. Wo Wertesätze für allgemeine Anwendungsfälle vorgeschlagen wurden, können diese für die lokale Verwendung angepasst werden, indem die „Text“-Auswahl verwendet wird, um jedem spezifischen Anwendungsfall zu entsprechen.\r\n\r\nÜber die EVENT-Struktur aus dem Referenzmodell kann festgelegt werden, ob sich die Fragen auf einen Zeitpunkt oder einen Zeitraum beziehen. Verwenden Sie eine separate Instanz dieses Archetyps, um zwischen einer Befragung zu unterscheiden, der Informationen über ein Medikament enthält, das zu einem beliebigen Zeitpunkt in der Vergangenheit angewendet wurde, und Informationen über ein Medikament, das innerhalb eines bestimmten Zeitintervalls durchgeführt wurde - zum Beispiel den Unterschied zwischen \"Verwenden Sie Paracetamol? \" im Vergleich zu \"Haben Sie in den letzten vier Wochen Antikoagulanzien verwendet?\".\r\n\r\nDie Quelle der Informationen in einer Fragebogenantwort kann in verschiedenen Kontexten variieren, kann jedoch mithilfe des Elements „Information provider“ im Referenzmodell spezifisch identifiziert werden.\r\n\r\nDieser Archetyp wurde entwickelt, um als Screening-Tool oder zur Darstellung einfacher Daten im Fragebogenformat zur Verwendung in Situationen wie einem Krankheitsregister verwendet zu werden. Wenn der Screening-Fragebogen das Vorhandensein eines Medikaments identifiziert, wird empfohlen, dass das klinische System die spezifischen Details über das Medikament unter Verwendung eines relevanten Medikations-Archetyps darstellt und beibehält, zum Beispiel das OBSERVATION.medication_statement, um eine detaillierte Momentaufnahme über die tatsächliche Verwendung des spezifischen Medikaments darzustellen.",
+          "misuse" : "Nicht zur Darstellung einer Anforderung für ein zu verabreichendes oder zu konsumierendes Medikament zu verwenden - verwenden Sie zu diesem Zweck INSTRUCTION.medication_order.\r\n\r\nNicht zur Darstellung der Verabreichung, Abgabe oder Einnahme eines Medikaments verwenden - verwenden Sie ACTION.medication für diesen Zweck.\r\n\r\nNicht zur Darstellung einer Zusammenfassung der Verwendung eines Medikaments über die Lebenszeit der Person zu verwenden – verwenden Sie zu diesem Zweck EVALUATION.medication_summary.\r\n\r\nDarf nicht verwendet werden, um eine detaillierte Momentaufnahme über die tatsächliche Verwendung eines einzelnen angegebenen Medikaments außerhalb eines Screening-Kontexts darzustellen. - Verwenden Sie zu diesem Zweck OBSERVATION.medication_statement.\r\n\r\nDarf nicht verwendet werden, um Details über das Fehlen eines bestimmten Medikaments oder einer Medikamentengruppe außerhalb eines Screening-Kontexts darzustellen. Verwenden Sie zu diesem Zweck EVALUATION.exclusion_specific.\r\n\r\nNicht zu verwenden, um einen Rahmen für die Darstellung von Antworten auf vordefinierte Screening-Fragen zu Nebenwirkungen zu schaffen, verwenden Sie zu diesem Zweck einen geeigneten Archetyp.\r\n\r\nDarf nicht verwendet werden, um Details zu einer einfachen Auswahlliste darzustellen, in der eine Frage entweder als \"vorhanden\" oder \"unbestimmt\" aufgezeichnet werden kann. Verwenden Sie dazu OBSERVATION.selection_list.",
+          "copyright" : "© openEHR Foundation, Nasjonal IKT HF",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å lage et rammeverk for registrering av svar på forhåndsdefinerte spørsmål om bruken av et hvilket som helst legemiddel eller gruppe av legemidler.",
+          "keywords" : [ "legemiddel, kartlegging, spørreskjema, legemiddelgruppe, medikament" ],
+          "use" : "Brukes for å lage et rammeverk for registrering av svar på forhåndsdefinerte spørsmål om bruken av et hvilket som helst legemiddel eller gruppe av legemidler.\r\n\r\nEksempler på legemidler, grupper og klasser av legemidler er \"alendronsyre\", \"osteoporosemedisiner\" og \"bisfosfonater\".\r\n\r\nVanlige bruksområder inkluderer, men er ikke begrenset til:\r\n- Systematiske spørsmål ved konsultasjoner, for eksempel:\r\n--- Bruker du paracetamol? Ja, Nei, Ukjent.\r\n--- Har du brukt noen blodfortynnende medisiner de siste 4 ukene? Ja, Nei, Ukjent.\r\n\r\nSemantikken til denne arketypen er med vilje løst definert, og spørringer etter data i denne arketypen vil normalt bare være hensiktsmessig eller sikkert i konteksten av det spesifikke templatet. I et templat vil hvert dataelement vanligvis døpes om til det (spesifikke) spørsmålet man ønsker svar på. Flere steder er det foreslått verdisett som passer til de vanligste bruksområder, men det er allikevel mulig å tilpasse/endre verdisett for lokal bruk ved å benytte de alternative datatypene DV_TEXT eller DV_BOOLEAN for å harmonere verdisettet til hvert enkelt brukstilfelle.\r\n\r\nEVENT-strukturen fra arketypens referansemodell kan brukes for å spesifisere om spørsmålene relateres til et tidspunkt eller til et tidsintervall.\r\nBruk egne instanser av denne arketypen for å skille mellom spørsmål om bruk av et legemiddel på et hvilket som helst tidspunkt og spørsmål om legemidler som er brukt i et tidsintervall. For eksempel; \"Bruker du paracetamol nå?\" sammenlignet med \"Har du brukt noen smertestillende medisin de siste 4 ukene?\".\r\n\r\nKilden til informasjonen i et spørreskjema kan variere i ulike kontekster, men kan identifiseres spesifikt ved å benytte \"Information provider\" elementet i openEHR referansemodellen.\r\n\r\nDenne arketypen er laget for å bli brukt i et spørreskjema eller for å registrere enkle strukturerte data til for eksempel et sykdomsregister. Dersom det i spørreskjemaet identifiseres at et legemiddel er tilstede, anbefales det at spesifikke detaljer om legemiddelet registreres og lagres i pasientjournalen i en egnet legemiddelarketype, for eksempel arketypen OBSERVATION.medication_statement for å registrere et detaljert øyeblikksbilde om bruken av et enkelt spesifisert legemiddel.",
+          "misuse" : "Brukes ikke for å dokumentere forordningen av et legemiddel - bruk arketypen INSTRUCTION.medication_order (Legemiddelordinering) til dette formålet.\r\n\r\nBrukes ikke for å dokumentere administreringen av et legemiddel - bruk arketypen ACTION.medication (Legemiddelhåndtering) til dette formålet.\r\n\r\nBrukes ikke for å registrere et sammendrag om all bruk av et spesifisert legemiddel over et individs livstid, bruk arketypen EVALUATION.medication_summary (Legemiddelsammendrag) til dette formålet.\r\n\r\nBrukes ikke for å registrere et detaljert øyeblikksbilde om bruken av et enkelt spesifisert legemiddel, utenfor konteksten av kartleggingen. Bruk arketypen OBSERVATION.medication_statement for dette formålet.\r\n\r\nBrukes ikke for å registrere detaljer om etablert fravær av et spesifikt legemiddel eller gruppe av legemidler i pasientjournalen, utenfor konteksten av kartleggingen. Bruk arketypen EVALUATION.exclusion_specific for dette formålet.\r\n\r\nBrukes ikke for å lage et rammeverk for registrering av svar på forhåndsdefinerte spørsmål om overfølsomhetsreaksjoner, bruk en egnet arketype for dette formålet.\r\n\r\nBrukes ikke for å registrere detaljer om en enkel utvalgsliste der et spørsmål kan registreres som enten \"Tilstede\" eller \"Ubestemt\". Bruk arketypen OBSERVATION.selection_list for dette formålet.",
+          "copyright" : "© openEHR Foundation, Nasjonal IKT HF, openEHR Foundation, openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To create a framework for recording answers to pre-defined screening questions about the use of any specified medication or grouping of medications.",
+          "keywords" : [ "medication, screening, questionnaire, drug, treatment" ],
+          "use" : "Use to create a framework for recording answers to pre-defined screening questions about the use of any specified medication or grouping (including classes) of medications.\r\n\r\nExamples of medications, groupings and classes of medications are 'alendronic acid', 'anti osteoporosis medications' and 'bisphosphonates', respectively.\r\n\r\nCommon use cases include, but are not limited to:\r\n- Systematic questioning in any consultation related to patterns of medication usage, for example:\r\n--- Do you use paracetamol? Yes, No, Unknown.\r\n--- Have you been using any anticoagulants the last four weeks? Yes, No, Unknown.\r\n\r\nThe semantics of this archetype are intentionally loose, and querying this archetype would normally only be useful or safe within the context of each specific template. In a template, each data element would usually be renamed to the specific question asked. Where value sets have been proposed for common use cases, these can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case.\r\n\r\nThe EVENT structure from the reference model can be used to specify whether the questions relate to point in time or over a period of time. Use a separate instance of this archetype to distinguish between a questionnaire recording information about a medication that has been used at any time in the past and information about a medication used within a specified time interval - for example the difference between \"Do you use paracetamol?\" compared to \"Have you been using any anticoagulants during the last four weeks?\".\r\n\r\nThe source of the information in a questionnaire response may vary in different contexts but can be specifically identified using the 'Information provider' element in the Reference Model.\r\n\r\nThis archetype has been designed to be used as a screening tool or to record simple questionnaire-format data for use in situations such as a disease registry. If the screening questionnaire identifies the presence of a medication it is recommended that clinical system record and persist the specific details about the medication using a relevant medication archetype, for example the OBSERVATION.medication_statement to record a detailed snapshot view about the actual use of a single specified medication.",
+          "misuse" : "Not to be used for recording an order for a medication to be administered or consumed - use INSTRUCTION.medication_order for this purpose.\r\n\r\nNot to be used for recording the administration, dispensing or consumption of a medication - use ACTION.medication for this purpose.\r\n\r\nNot to be used for recording a summary of use of a medication over the lifetime of the individual - use EVALUATION.medication_summary for this purpose.\r\n\r\nNot to be used to record a detailed snapshot view about the actual use of a single specified medication, outside of a screening context. - use OBSERVATION.medication_statement for this purpose.\r\n\r\nNot to be used to record details about the positive absence of a specific medication or grouping of medication, outside of a screening context. Use EVALUATION.exclusion_specific for this purpose.\r\n\r\nNot to be used to to create a framework for recording answers to pre-defined screening questions about adverse reactions, use an appropriate archetype for this purpose.\r\n\r\nNot to be used to record details about a simple selection list where a question may be recorded as either \"present\" or \"indeterminate\". Use OBSERVATION.selection_list for this purpose.",
+          "copyright" : "© openEHR Foundation, Nasjonal IKT HF",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nl" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nl"
+          },
+          "purpose" : "*To create a framework for recording answers to pre-defined screening questions about the use of a any medication. (en)",
+          "keywords" : [ "*medication, screening, questionnaire, drug, treatment (en)" ],
+          "use" : "*Use to create a framework for recording answers to pre-defined screening questions about the use of any specified medication or grouping (including classes) of medications.\r\n\r\nExamples of medications, groupings and classes of medications are 'alendronic acid', 'anti osteoporosis medications' and 'bisphosphonates', respectively.\r\n\r\nCommon use cases include, but are not limited to:\r\n- Systematic questioning in any consultation related to patterns of medication usage , for example:\r\n--- Do you use paracetamol? Yes, No, Unknown.\r\n--- Have you been using any anticoagulants the last four weeks? Yes, No, Unknown.\r\n\r\nThe semantics of this archetype are intentionally loose, and querying this archetype would normally only be useful or safe within the context of each specific template. In a template, each data element would usually be renamed to the specific question asked. Where value sets have been proposed for common use cases, these can be adapted for local use by using the 'text' choice to match each specific use case.\r\n\r\nThe EVENT structure from the reference model can be used to specify whether the questions relate to point in time or over a period of time. Use a separate instance of this archetype to distinguish between a questionnaire recording information about a procedure that has been performed at any time in the past and information about a procedure performed within a specified time interval - for example the difference between \"Do you use paracetamol?\" compared to \"Have you been using any anticoagulants the last four weeks?\".\r\n\r\nThe source of the information in a questionnaire response may vary in different contexts but can be specifically identified using the 'Information provider' element in the Reference Model.\r\n\r\nThis archetype has been designed to be used as a screening tool or to record simple questionnaire-format data for use in situations such as a disease registry. If the screening questionnaire identifies the presence of a medication it is recommended that clinical system record and persist the specific details about the medication using a relevant medication archetype, for example the OBSERVATION.medication_statement to record a detailed snapshot view about the actual use of a single specified medication. (en)",
+          "misuse" : "*Not to be used for recording an order for a medication to be administered or consumed - use INSTRUCTION.medication_order for this purpose.\r\n\r\nNot to be used for recording the administration, dispensing or consumption of a medication - use ACTION.medication for this purpose.\r\n\r\nNot to be used for recording a summary of use of a medication over the lifetime of the individual - use EVALUATION.medication_summary for this purpose.\r\n\r\nNot to be used to record a detailed snapshot view about the actual use of a single specified medication, outside of a screening context. - use OBSERVATION.medication_statement for this purpose.\r\n\r\nNot to be used to record details about the positive absence of a specific medication or grouping of medication, outside of a screening context. Use EVALUATION.exclusion_specific for this purpose.\r\n\r\nNot to be used to to create a framework for recording answers to pre-defined screening questions about adverse reactions, use an appropriate archetype for this purpose.\r\n\r\nNot to be used to record details about a simple selection list where a question may be recorded as either \"present\" or \"indeterminate\". Use OBSERVATION.selection_list for this purpose. (en)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "ca" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "ca"
+          },
+          "purpose" : "Crear un marc per registrar les respostes a preguntes de cribratge predefinides sobre l'ús de qualsevol medicament o agrupació de medicaments especificats.",
+          "keywords" : [ "medicació, cribratge, qüestionari, fàrmac, tractament" ],
+          "use" : "Utilitzeu-lo per crear un marc per registrar les respostes a preguntes de cribratge predefinides sobre l'ús de qualsevol medicament o agrupació (incloses les classes) de medicaments especificats.\r\n\r\nExemples de medicaments, agrupacions i classes de medicaments són \"àcid alendrònic\", \"medicaments contra l'osteoporosi\" i \"bifosfonats\", respectivament.\r\n\r\nEls casos d'ús habituals inclouen, però no es limiten a:\r\n- Qüestionament sistemàtic en qualsevol consulta relacionada amb patrons d'ús de medicaments, per exemple:\r\n--- Fas servir paracetamol? Sí, no, desconegut.\r\n--- Heu fet servir algun anticoagulant les últimes quatre setmanes? Sí, no, desconegut.\r\n\r\nLa semàntica d'aquest arquetip és intencionadament en línies generals, i la consulta d'aquest arquetip normalment només seria útil o segura en el context de cada plantilla específica. En una plantilla, cada element de dades normalment es canviaria de nom a la pregunta específica formulada. Quan s'han proposat conjunts de valors per a casos d'ús habituals, aquests es poden adaptar per a l'ús local mitjançant l'opció de tipus de dades DV_TEXT o DV_BOOLEAN per fer coincidir cada cas d'ús específic.\r\n\r\nL'estructura EVENT del model de referència es pot utilitzar per especificar si les preguntes es relacionen amb un punt en el temps o durant un període de temps. Utilitzeu una instància separada d'aquest arquetip per distingir entre un qüestionari que registra informació sobre un medicament que s'ha utilitzat en qualsevol moment en el passat i informació sobre un medicament utilitzat dins d'un interval de temps especificat, per exemple, la diferència entre \"Feu servir paracetamol?\" en comparació amb \"Has estat utilitzant algun anticoagulant durant les últimes quatre setmanes?\".\r\n\r\nLa font de la informació en una resposta al qüestionari pot variar en diferents contextos, però es pot identificar específicament mitjançant l'element \"Proveïdor d'informació\" del model de referència.\r\n\r\nAquest arquetip ha estat dissenyat per ser utilitzat com a eina de cribratge o per registrar dades senzilles en format de qüestionari per utilitzar-les en situacions com ara un registre de malalties. Si el qüestionari de detecció identifica la presència d'un medicament, es recomana que el sistema clínic enregistri i persisteixi els detalls específics sobre el medicament mitjançant un arquetip de medicament rellevant, per exemple, la declaració OBSERVATION.medication_statement per registrar una visualització instantània detallada sobre l'ús real d'una única medicació especificada.",
+          "misuse" : "No s'ha d'utilitzar per registrar una comanda d'un medicament que s'ha d'administrar o consumir; utilitzeu INSTRUCTION.medication_order per a aquest propòsit.\r\n\r\nNo s'ha d'utilitzar per registrar l'administració, la dispensació o el consum d'un medicament - utilitzar ACTION.medication per a aquesta finalitat.\r\n\r\nNo s'ha d'utilitzar per registrar un resum de l'ús d'un medicament al llarg de la vida de l'individu; utilitzeu EVALUATION.medication_summary per a aquest propòsit.\r\n\r\nNo s'ha d'utilitzar per gravar una instantània detallada sobre l'ús real d'un únic medicament especificat, fora d'un context de detecció. - utilitzeu OBSERVATION.medication_statement per a aquest propòsit.\r\n\r\nNo s'ha d'utilitzar per registrar detalls sobre l'absència positiva d'un medicament o agrupació de medicaments específics, fora d'un context de cribratge. Utilitzeu EVALUATION.exclusion_specific per a aquest propòsit.\r\n\r\nNo s'ha d'utilitzar per crear un marc per registrar les respostes a preguntes de cribratge predefinides sobre reaccions adverses, utilitzeu un arquetip adequat per a aquest propòsit.\r\n\r\nNo s'ha d'utilitzar per registrar detalls sobre una llista de selecció simple on una pregunta es pot registrar com a \"present\" o \"indeterminada\". Utilitzeu OBSERVATION.selection_list per a aquest propòsit.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "es" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "es"
+          },
+          "purpose" : "Crear un marco para registrar respuestas a preguntas de detección predefinidas sobre el uso de cualquier medicamento o grupo de medicamentos específico.",
+          "keywords" : [ "medicación, cribado, cuestionario, fármaco, tratamiento" ],
+          "use" : "Úselo para crear un marco para registrar respuestas a preguntas de detección predefinidas sobre el uso de cualquier medicamento o grupo (incluidas clases) de medicamentos específicos.\r\n\r\nEjemplos de medicamentos, grupos y clases de medicamentos son \"ácido alendrónico\", \"medicamentos contra la osteoporosis\" y \"bifosfonatos\", respectivamente.\r\n\r\nLos casos de uso comunes incluyen, entre otros:\r\n- Cuestionamiento sistemático en cualquier consulta relacionada con patrones de uso de medicamentos, por ejemplo:\r\n--- ¿Usas paracetamol? Sí, No, Desconocido.\r\n--- ¿Ha estado usando algún anticoagulante en las últimas cuatro semanas? Sí, No, Desconocido.\r\n\r\nLa semántica de este arquetipo es intencionalmente en líneas generales y consultar este arquetipo normalmente solo sería útil o seguro dentro del contexto de cada plantilla específica. En una plantilla, a cada elemento de datos normalmente se le cambiaría el nombre según la pregunta específica formulada. Cuando se han propuesto conjuntos de valores para casos de uso comunes, estos se pueden adaptar para uso local utilizando la opción de tipos de datos DV_TEXT o DV_BOOLEAN para que coincidan con cada caso de uso específico.\r\n\r\nLa estructura EVENTO del modelo de referencia se puede utilizar para especificar si las preguntas se relacionan con un momento determinado o durante un período de tiempo. Utilice una instancia separada de este arquetipo para distinguir entre un cuestionario que registra información sobre un medicamento que se ha usado en cualquier momento en el pasado e información sobre un medicamento usado dentro de un intervalo de tiempo específico; por ejemplo, la diferencia entre \"¿Usa paracetamol?\", en comparación con \"¿Ha estado usando algún anticoagulante durante las últimas cuatro semanas?\".\r\n\r\nLa fuente de información en una respuesta al cuestionario puede variar en diferentes contextos, pero se puede identificar específicamente utilizando el elemento 'Proveedor de información' en el Modelo de Referencia.\r\n\r\nEste arquetipo ha sido diseñado para usarse como herramienta de detección o para registrar datos en formato de cuestionario simple para su uso en situaciones como un registro de enfermedades. Si el cuestionario de detección identifica la presencia de un medicamento, se recomienda que el sistema clínico registre y mantenga los detalles específicos sobre el medicamento utilizando un arquetipo de medicamento relevante, por ejemplo OBSERVATION.medication_statement para registrar una vista instantánea detallada sobre el uso real de un solo medicamento especificado.",
+          "misuse" : "No debe usarse para registrar una orden de administración o consumo de un medicamento; usar INSTRUCTION.medication_order para este propósito.\r\n\r\nNo debe usarse para registrar la administración, dispensación o consumo de un medicamento; usar ACTION.medication para este propósito.\r\n\r\nNo debe usarse para registrar un resumen del uso de un medicamento durante la vida del individuo; usar EVALUATION.medication_summary para este propósito.\r\n\r\nNo debe utilizarse para registrar una instantánea detallada del uso real de un único medicamento específico, fuera de un contexto de detección. - usar OBSERVATION.medication_statement para este fin.\r\n\r\nNo debe utilizarse para registrar detalles sobre la ausencia positiva de un medicamento o grupo de medicamentos específico, fuera de un contexto de detección. Utilice EVALUATION.exclusion_specific para este propósito.\r\n\r\nNo debe utilizarse para crear un marco para registrar respuestas a preguntas de detección predefinidas sobre reacciones adversas, utilice un arquetipo apropiado para este propósito.\r\n\r\nNo debe utilizarse para registrar detalles sobre una lista de selección simple donde una pregunta puede registrarse como \"presente\" o \"indeterminada\". Utilice OBSERVATION.selection_list para este propósito.",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.medication_screening.v1",
     "differential" : true,
@@ -2633,6 +3254,1243 @@
         "name" : "Laura Moral Lopez",
         "organisation" : "Sistema de Salut de Catalunya",
         "email" : "lmorallopez@gmail.com"
+      },
+      "otherDetails" : { }
+    } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "869717c5-7a5a-468f-b57b-c60d88cb5271",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "2A940E09AE1750C1009EE5F77FFC95B3"
+      },
+      "details" : { }
+    },
+    "parentArchetypeId" : "openEHR-EHR-OBSERVATION.pulse.v2",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-OBSERVATION.ovl-pulse-001.v2"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "OBSERVATION",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "data",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "HISTORY",
+          "nodeId" : "at0002",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "events",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "EVENT",
+              "nodeId" : "at0003",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "data",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ITEM_TREE",
+                  "nodeId" : "at0001.1",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "items",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at1005.1",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_CODED_TEXT",
+                          "defaultValue" : {
+                            "defining_code" : {
+                              "code_string" : "at1024",
+                              "@type" : "CODE_PHRASE"
+                            },
+                            "@type" : "DV_CODED_TEXT"
+                          },
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "defining_code",
+                            "children" : [ {
+                              "@type" : "C_TERMINOLOGY_CODE",
+                              "rmTypeName" : "TERMINOLOGY_CODE",
+                              "occurrences" : "1..1",
+                              "terminologyId" : {
+                                "value" : "local"
+                              },
+                              "constraint" : [ "ac0.8" ],
+                              "selectedTerminologies" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at0005.1",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_CODED_TEXT",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "defining_code",
+                            "children" : [ {
+                              "@type" : "C_TERMINOLOGY_CODE",
+                              "rmTypeName" : "TERMINOLOGY_CODE",
+                              "occurrences" : "1..1",
+                              "terminologyId" : {
+                                "value" : "local"
+                              },
+                              "constraint" : [ "ac0.1" ],
+                              "selectedTerminologies" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at1055.1",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_CODED_TEXT",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "defining_code",
+                            "children" : [ {
+                              "@type" : "C_TERMINOLOGY_CODE",
+                              "rmTypeName" : "TERMINOLOGY_CODE",
+                              "occurrences" : "1..1",
+                              "terminologyId" : {
+                                "value" : "local"
+                              },
+                              "constraint" : [ "ac0.2" ],
+                              "selectedTerminologies" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at1030.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at1022.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at1023.1",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "name",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_CODED_TEXT",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "defining_code",
+                            "children" : [ {
+                              "@type" : "C_TERMINOLOGY_CODE",
+                              "rmTypeName" : "TERMINOLOGY_CODE",
+                              "occurrences" : "1..1",
+                              "terminologyId" : {
+                                "value" : "local"
+                              },
+                              "constraint" : [ "ac0.4" ],
+                              "selectedTerminologies" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
+                      "nodeId" : "at1059.1",
+                      "attributes" : [ ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              }, {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "state",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ITEM_TREE",
+                  "nodeId" : "at0012.1",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "items",
+                    "children" : [ {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "nodeId" : "at0013.1",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_CODED_TEXT",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "defining_code",
+                            "children" : [ {
+                              "@type" : "C_TERMINOLOGY_CODE",
+                              "rmTypeName" : "TERMINOLOGY_CODE",
+                              "occurrences" : "1..1",
+                              "terminologyId" : {
+                                "value" : "local"
+                              },
+                              "constraint" : [ "ac0.7" ],
+                              "selectedTerminologies" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "INTERVAL_EVENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at1036.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "data",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ITEM_TREE",
+                  "nodeId" : "at0001.2",
+                  "targetPath" : "/data[at0002]/events[at0003]/data[at0001.1]",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              }, {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "state",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "ITEM_TREE",
+                  "nodeId" : "at0012.2",
+                  "targetPath" : "/data[at0002]/events[at0003]/state[at0012.1]",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              }, {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "math_function",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "defining_code",
+                    "children" : [ {
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "rmTypeName" : "TERMINOLOGY_CODE",
+                      "terminologyId" : {
+                        "value" : "openehr"
+                      },
+                      "constraint" : [ "144" ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      }, {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "protocol",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ITEM_TREE",
+          "nodeId" : "at0010",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "items",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "nodeId" : "at1019.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "defaultValue" : {
+                    "defining_code" : {
+                      "code_string" : "at1034",
+                      "@type" : "CODE_PHRASE"
+                    },
+                    "@type" : "DV_CODED_TEXT"
+                  },
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "defining_code",
+                    "children" : [ {
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "rmTypeName" : "TERMINOLOGY_CODE",
+                      "occurrences" : "1..1",
+                      "terminologyId" : {
+                        "value" : "local"
+                      },
+                      "constraint" : [ "ac0.5" ],
+                      "selectedTerminologies" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "ELEMENT",
+              "occurrences" : "0..0",
+              "nodeId" : "at1037.1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "value",
+                "children" : [ {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_CODED_TEXT",
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "defining_code",
+                    "children" : [ {
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "rmTypeName" : "TERMINOLOGY_CODE",
+                      "occurrences" : "1..1",
+                      "terminologyId" : {
+                        "value" : "local"
+                      },
+                      "constraint" : [ "ac0.6" ],
+                      "selectedTerminologies" : [ ]
+                    } ]
+                  } ],
+                  "attributeTuples" : [ ]
+                }, {
+                  "@type" : "C_COMPLEX_OBJECT",
+                  "rmTypeName" : "DV_TEXT",
+                  "attributes" : [ ],
+                  "attributeTuples" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "ar-sy" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : ""
+          },
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : ""
+          },
+          "ac0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.4",
+            "description" : ""
+          },
+          "ac0.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.5",
+            "description" : ""
+          },
+          "ac0.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.6",
+            "description" : ""
+          },
+          "ac0.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.7",
+            "description" : ""
+          },
+          "ac0.8" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.8",
+            "description" : ""
+          }
+        },
+        "es-co" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : ""
+          },
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : ""
+          },
+          "ac0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.4",
+            "description" : ""
+          },
+          "ac0.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.5",
+            "description" : ""
+          },
+          "ac0.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.6",
+            "description" : ""
+          },
+          "ac0.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.7",
+            "description" : ""
+          },
+          "ac0.8" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.8",
+            "description" : ""
+          }
+        },
+        "en" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.1",
+            "description" : ""
+          },
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.2",
+            "description" : ""
+          },
+          "ac0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.4",
+            "description" : ""
+          },
+          "ac0.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.5",
+            "description" : ""
+          },
+          "ac0.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.6",
+            "description" : ""
+          },
+          "ac0.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.7",
+            "description" : ""
+          },
+          "ac0.8" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.8",
+            "description" : ""
+          }
+        },
+        "de" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : ""
+          },
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : ""
+          },
+          "ac0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.4",
+            "description" : ""
+          },
+          "ac0.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.5",
+            "description" : ""
+          },
+          "ac0.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.6",
+            "description" : ""
+          },
+          "ac0.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.7",
+            "description" : ""
+          },
+          "ac0.8" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.8",
+            "description" : ""
+          }
+        },
+        "ru" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : ""
+          },
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : ""
+          },
+          "ac0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.4",
+            "description" : ""
+          },
+          "ac0.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.5",
+            "description" : ""
+          },
+          "ac0.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.6",
+            "description" : ""
+          },
+          "ac0.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.7",
+            "description" : ""
+          },
+          "ac0.8" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.8",
+            "description" : ""
+          }
+        },
+        "pt-br" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : ""
+          },
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : ""
+          },
+          "ac0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.4",
+            "description" : ""
+          },
+          "ac0.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.5",
+            "description" : ""
+          },
+          "ac0.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.6",
+            "description" : ""
+          },
+          "ac0.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.7",
+            "description" : ""
+          },
+          "ac0.8" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.8",
+            "description" : ""
+          }
+        },
+        "sv" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : ""
+          },
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : ""
+          },
+          "ac0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.4",
+            "description" : ""
+          },
+          "ac0.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.5",
+            "description" : ""
+          },
+          "ac0.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.6",
+            "description" : ""
+          },
+          "ac0.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.7",
+            "description" : ""
+          },
+          "ac0.8" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.8",
+            "description" : ""
+          }
+        },
+        "es" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : ""
+          },
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : ""
+          },
+          "ac0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.4",
+            "description" : ""
+          },
+          "ac0.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.5",
+            "description" : ""
+          },
+          "ac0.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.6",
+            "description" : ""
+          },
+          "ac0.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.7",
+            "description" : ""
+          },
+          "ac0.8" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.8",
+            "description" : ""
+          }
+        },
+        "fi" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : ""
+          },
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : ""
+          },
+          "ac0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.4",
+            "description" : ""
+          },
+          "ac0.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.5",
+            "description" : ""
+          },
+          "ac0.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.6",
+            "description" : ""
+          },
+          "ac0.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.7",
+            "description" : ""
+          },
+          "ac0.8" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.8",
+            "description" : ""
+          }
+        },
+        "nb" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : ""
+          },
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : ""
+          },
+          "ac0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.4",
+            "description" : ""
+          },
+          "ac0.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.5",
+            "description" : ""
+          },
+          "ac0.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.6",
+            "description" : ""
+          },
+          "ac0.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.7",
+            "description" : ""
+          },
+          "ac0.8" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.8",
+            "description" : ""
+          }
+        },
+        "nl" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : ""
+          },
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : ""
+          },
+          "ac0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.4",
+            "description" : ""
+          },
+          "ac0.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.5",
+            "description" : ""
+          },
+          "ac0.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.6",
+            "description" : ""
+          },
+          "ac0.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.7",
+            "description" : ""
+          },
+          "ac0.8" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.8",
+            "description" : ""
+          }
+        },
+        "el" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : ""
+          },
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : ""
+          },
+          "ac0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.4",
+            "description" : ""
+          },
+          "ac0.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.5",
+            "description" : ""
+          },
+          "ac0.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.6",
+            "description" : ""
+          },
+          "ac0.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.7",
+            "description" : ""
+          },
+          "ac0.8" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.8",
+            "description" : ""
+          }
+        },
+        "zh-cn" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : ""
+          },
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : ""
+          },
+          "ac0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.4",
+            "description" : ""
+          },
+          "ac0.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.5",
+            "description" : ""
+          },
+          "ac0.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.6",
+            "description" : ""
+          },
+          "ac0.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.7",
+            "description" : ""
+          },
+          "ac0.8" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.8",
+            "description" : ""
+          }
+        },
+        "ca" : {
+          "ac0.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.1",
+            "description" : ""
+          },
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : ""
+          },
+          "ac0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.4",
+            "description" : ""
+          },
+          "ac0.5" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.5",
+            "description" : ""
+          },
+          "ac0.6" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.6",
+            "description" : ""
+          },
+          "ac0.7" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.7",
+            "description" : ""
+          },
+          "ac0.8" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.8",
+            "description" : ""
+          }
+        }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : {
+        "ac0.1" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.1",
+          "members" : [ "at0006", "at1028" ]
+        },
+        "ac0.2" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.2",
+          "members" : [ "at0007", "at0008" ]
+        },
+        "ac0.3" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.3",
+          "members" : [ "at1057", "at1058" ]
+        },
+        "ac0.4" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.4",
+          "members" : [ "at1057", "at1058" ]
+        },
+        "ac0.5" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.5",
+          "members" : [ "at1032", "at1033", "at1034", "at1050" ]
+        },
+        "ac0.6" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.6",
+          "members" : [ "at1038", "at1039", "at1040", "at1041", "at1042", "at1043", "at1044", "at1049", "at1048", "at1047", "at1054", "at1051" ]
+        },
+        "ac0.7" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.7",
+          "members" : [ "at1003", "at1001", "at1000" ]
+        },
+        "ac0.8" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.8",
+          "members" : [ "at1024", "at1025" ]
+        }
+      }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "6133c0b3-a7bf-41f1-a422-453bf385cea9",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : {
+        "name" : "Jasmin Buck, Sebastian Garde, Ramona Wellmann",
+        "organisation" : "University of Heidelberg, Central Queensland University, Hannover Medical School"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "ru"
+      },
+      "author" : {
+        "name" : "Vyacheslav Mavrin",
+        "organisation" : "JSC Comsoft"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "sv"
+      },
+      "author" : {
+        "name" : "Erik Sundvall, Åsa Skagerhult, Kirsi Poikela, Manna Vosta",
+        "organisation" : "Region Östergötland, Tieto Sweden AB, Karolinska University Hospital, Västra Götalandsregionen",
+        "email" : "asa.skagerhult@vgregion.se, ext.kirsi.poikela@tieto.com, manna.vosta@regionstockholm.se"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "fi"
+      },
+      "author" : {
+        "name" : "Vesa Peltola",
+        "organisation" : "Tieto Finland",
+        "email" : "vesa.peltola@tieto.com"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "pt-br"
+      },
+      "author" : {
+        "name" : "Osmeire Chamelette Sanzovo",
+        "organisation" : "Hospital Sírio Libanês - SP",
+        "email" : "osmeire.acsanzovo@hsl.org.br"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "el"
+      },
+      "author" : {
+        "name" : "Erasmia Partafylla",
+        "organisation" : "Sigmasoft",
+        "email" : "c.partafylla@sigmasoft.gr"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "ar-sy"
+      },
+      "author" : {
+        "name" : "Mona Saleh"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "zh-cn"
+      },
+      "author" : {
+        "name" : "Lin Zhang",
+        "organisation" : "Freelancer",
+        "email" : "linforest@163.com"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "es"
+      },
+      "author" : {
+        "name" : "Pablo Pazos, Clara Calleja Vega",
+        "organisation" : "CaboLabs - Health Informatics, CatSalut - Servei Català de la Salut.",
+        "email" : "pablo.pazos@cabolabs.com, ccalleja@catsalut.cat"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "es-co"
+      },
+      "author" : {
+        "name" : "Jose Florez-Arango"
+      },
+      "accreditation" : "MD MS PhD",
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : {
+        "name" : "Silje Ljosland Bakke",
+        "organisation" : "Helse Bergen HF",
+        "email" : "."
+      },
+      "accreditation" : "RN",
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nl"
+      },
+      "author" : {
+        "name" : "Joost Holslag",
+        "organisation" : "Nedap",
+        "email" : "joost.holslag@nedap.com"
+      },
+      "accreditation" : "MD",
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "ca"
+      },
+      "author" : {
+        "name" : "Clara Calleja Vega",
+        "organisation" : "CatSalut. Servei Català de la Salut.",
+        "email" : "ccalleja@catsalut.cat"
       },
       "otherDetails" : { }
     } ]
