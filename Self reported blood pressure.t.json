@@ -19,9 +19,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "5.0.0",
+      "sem_ver" : "6.0.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "c81ce039865e95269a506cd1f4701a17",
+      "MD5-CAM-1.0.1" : "70162f171d90909c75ab3b926486c7cc",
       "PARENT:MD5-CAM-1.0.1" : "D1C4FAAB741EAA41EDA9E0651266BCFD"
     },
     "details" : {
@@ -758,6 +758,35 @@
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "ELEMENT",
                       "occurrences" : "0..0",
+                      "nodeId" : "at1043.1",
+                      "attributes" : [ {
+                        "@type" : "C_ATTRIBUTE",
+                        "rmAttributeName" : "value",
+                        "children" : [ {
+                          "@type" : "C_COMPLEX_OBJECT",
+                          "rmTypeName" : "DV_CODED_TEXT",
+                          "attributes" : [ {
+                            "@type" : "C_ATTRIBUTE",
+                            "rmAttributeName" : "defining_code",
+                            "children" : [ {
+                              "@type" : "C_TERMINOLOGY_CODE",
+                              "rmTypeName" : "TERMINOLOGY_CODE",
+                              "occurrences" : "1..1",
+                              "terminologyId" : {
+                                "value" : "local"
+                              },
+                              "constraint" : [ "ac0.18" ],
+                              "selectedTerminologies" : [ ]
+                            } ]
+                          } ],
+                          "attributeTuples" : [ ]
+                        } ]
+                      } ],
+                      "attributeTuples" : [ ]
+                    }, {
+                      "@type" : "C_COMPLEX_OBJECT",
+                      "rmTypeName" : "ELEMENT",
+                      "occurrences" : "0..0",
                       "nodeId" : "at1005.1",
                       "attributes" : [ {
                         "@type" : "C_ATTRIBUTE",
@@ -1120,6 +1149,12 @@
             "text" : "(Synthesized)",
             "code" : "ac0.17",
             "description" : ""
+          },
+          "ac0.18" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.18",
+            "description" : ""
           }
         },
         "ja" : {
@@ -1151,6 +1186,12 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.17",
+            "description" : ""
+          },
+          "ac0.18" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.18",
             "description" : ""
           }
         },
@@ -1184,6 +1225,12 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.17",
             "description" : ""
+          },
+          "ac0.18" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.18",
+            "description" : ""
           }
         },
         "zh-cn" : {
@@ -1215,6 +1262,12 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.17",
+            "description" : ""
+          },
+          "ac0.18" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.18",
             "description" : ""
           }
         },
@@ -1248,6 +1301,12 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.17",
             "description" : ""
+          },
+          "ac0.18" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.18",
+            "description" : ""
           }
         },
         "ru" : {
@@ -1279,6 +1338,12 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.17",
+            "description" : ""
+          },
+          "ac0.18" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.18",
             "description" : ""
           }
         },
@@ -1312,6 +1377,12 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.17",
             "description" : ""
+          },
+          "ac0.18" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.18",
+            "description" : ""
           }
         },
         "ar-sy" : {
@@ -1343,6 +1414,12 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.17",
+            "description" : ""
+          },
+          "ac0.18" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.18",
             "description" : ""
           }
         },
@@ -1376,6 +1453,12 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.17",
             "description" : ""
+          },
+          "ac0.18" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.18",
+            "description" : ""
           }
         },
         "pt-br" : {
@@ -1407,6 +1490,12 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.17",
+            "description" : ""
+          },
+          "ac0.18" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.18",
             "description" : ""
           }
         },
@@ -1440,6 +1529,12 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.17",
             "description" : ""
+          },
+          "ac0.18" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.18",
+            "description" : ""
           }
         },
         "es" : {
@@ -1471,6 +1566,12 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.17",
+            "description" : ""
+          },
+          "ac0.18" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.18",
             "description" : ""
           }
         },
@@ -1504,6 +1605,12 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.17",
             "description" : ""
+          },
+          "ac0.18" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.18",
+            "description" : ""
           }
         },
         "sv" : {
@@ -1535,6 +1642,12 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.17",
+            "description" : ""
+          },
+          "ac0.18" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.18",
             "description" : ""
           }
         },
@@ -1568,6 +1681,12 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.17",
             "description" : ""
+          },
+          "ac0.18" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.18",
+            "description" : ""
           }
         },
         "ca" : {
@@ -1600,6 +1719,12 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.17",
             "description" : ""
+          },
+          "ac0.18" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.18",
+            "description" : ""
           }
         },
         "el" : {
@@ -1631,6 +1756,12 @@
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.17",
+            "description" : ""
+          },
+          "ac0.18" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.18",
             "description" : ""
           }
         }
@@ -1727,6 +1858,11 @@
           "@type" : "VALUE_SET",
           "id" : "ac0.17",
           "members" : [ "at1036", "at1037", "at1039", "at1040" ]
+        },
+        "ac0.18" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.18",
+          "members" : [ "at1044", "at1045" ]
         }
       }
     },
@@ -2066,7 +2202,17 @@
                 "children" : [ {
                   "@type" : "C_COMPLEX_OBJECT",
                   "rmTypeName" : "DV_QUANTITY",
-                  "attributes" : [ ],
+                  "attributes" : [ {
+                    "@type" : "C_ATTRIBUTE",
+                    "rmAttributeName" : "property",
+                    "children" : [ {
+                      "@type" : "C_TERMINOLOGY_CODE",
+                      "terminologyId" : {
+                        "value" : "openehr"
+                      },
+                      "constraint" : [ "130" ]
+                    } ]
+                  } ],
                   "attributeTuples" : [ {
                     "@type" : "C_ATTRIBUTE_TUPLE",
                     "members" : [ {
