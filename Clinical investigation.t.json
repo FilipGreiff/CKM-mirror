@@ -19,9 +19,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "2.0.0",
+      "sem_ver" : "3.0.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "a7012df276bed4a5ba5479710f2c96c5",
+      "MD5-CAM-1.0.1" : "776aca48b01a0bf0376aec2d941806b3",
       "PARENT:MD5-CAM-1.0.1" : "3B0765A6B395C9D01595FDF2D440E6CB"
     },
     "details" : {
@@ -258,10 +258,10 @@
         "@type" : "C_ARCHETYPE_ROOT",
         "rmTypeName" : "SECTION",
         "occurrences" : "0..1",
-        "nodeId" : "at0.27",
+        "nodeId" : "at0.35",
         "attributes" : [ ],
         "attributeTuples" : [ ],
-        "archetypeRef" : "openEHR-EHR-SECTION.ovl-adhoc-001.v1",
+        "archetypeRef" : "openEHR-EHR-SECTION.ovl-medication_list-001.v0",
         "referenceType" : "archetypeOverlay"
       }, {
         "@type" : "C_ARCHETYPE_ROOT",
@@ -280,15 +280,6 @@
         "attributes" : [ ],
         "attributeTuples" : [ ],
         "archetypeRef" : "openEHR-EHR-EVALUATION.ovl-social_summary-001.v1",
-        "referenceType" : "archetypeOverlay"
-      }, {
-        "@type" : "C_ARCHETYPE_ROOT",
-        "rmTypeName" : "SECTION",
-        "occurrences" : "0..1",
-        "nodeId" : "at0.30",
-        "attributes" : [ ],
-        "attributeTuples" : [ ],
-        "archetypeRef" : "openEHR-EHR-SECTION.ovl-adhoc-002.v1",
         "referenceType" : "archetypeOverlay"
       }, {
         "@type" : "C_ARCHETYPE_ROOT",
@@ -316,6 +307,15 @@
         "attributes" : [ ],
         "attributeTuples" : [ ],
         "archetypeRef" : "openEHR-EHR-EVALUATION.ovl-recommendation-001.v2",
+        "referenceType" : "archetypeOverlay"
+      }, {
+        "@type" : "C_ARCHETYPE_ROOT",
+        "rmTypeName" : "SECTION",
+        "occurrences" : "0..1",
+        "nodeId" : "at0.32",
+        "attributes" : [ ],
+        "attributeTuples" : [ ],
+        "archetypeRef" : "openEHR-EHR-SECTION.ovl-problem_list-001.v0",
         "referenceType" : "archetypeOverlay"
       } ]
     } ],
@@ -2761,7 +2761,11 @@
     "annotations" : {
       "@type" : "RESOURCE_ANNOTATIONS",
       "documentation" : {
-        "en" : { }
+        "en" : {
+          "" : {
+            "loadFromTemplate" : "Medication list"
+          }
+        }
       }
     },
     "parentArchetypeId" : "openEHR-EHR-INSTRUCTION.medication_order.v3",
@@ -4475,7 +4479,7 @@
     } ]
   }, {
     "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "b9cb8971-ff6d-4896-92ff-0c2785ce1f8c",
+    "uid" : "90a55b96-eb1e-4947-88a5-781dd6603310",
     "description" : {
       "@type" : "RESOURCE_DESCRIPTION",
       "originalAuthor" : { },
@@ -4484,7 +4488,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "9FC6BA2D63BE451F034CE25153F4E298"
+        "PARENT:MD5-CAM-1.0.1" : "8367D4F2CF2BA5BE59DC4442FD28C085"
       },
       "details" : { }
     },
@@ -4498,11 +4502,11 @@
         }
       }
     },
-    "parentArchetypeId" : "openEHR-EHR-SECTION.adhoc.v1",
+    "parentArchetypeId" : "openEHR-EHR-SECTION.problem_list.v0",
     "differential" : true,
     "archetypeId" : {
       "@type" : "ARCHETYPE_HRID",
-      "value" : "openEHR-EHR-SECTION.ovl-adhoc-001.v1"
+      "value" : "openEHR-EHR-SECTION.ovl-problem_list-001.v0"
     },
     "definition" : {
       "@type" : "C_COMPLEX_OBJECT",
@@ -4511,18 +4515,11 @@
       "attributes" : [ {
         "@type" : "C_ATTRIBUTE",
         "rmAttributeName" : "items",
-        "existence" : "0..1",
-        "cardinality" : {
-          "@type" : "CARDINALITY",
-          "interval" : "1..*",
-          "ordered" : false,
-          "unique" : false
-        },
         "children" : [ {
           "@type" : "C_ARCHETYPE_ROOT",
           "rmTypeName" : "EVALUATION",
           "occurrences" : "0..*",
-          "nodeId" : "at0.1",
+          "nodeId" : "at0001.1",
           "attributes" : [ ],
           "attributeTuples" : [ ],
           "archetypeRef" : "openEHR-EHR-EVALUATION.ovl-problem_diagnosis-001.v1",
@@ -4535,35 +4532,17 @@
       "@type" : "ARCHETYPE_TERMINOLOGY",
       "conceptCode" : "at0000",
       "termDefinitions" : {
-        "en" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "Problem",
-            "description" : "A generic section header which should be renamed in a template to suit a specific clinical context."
-          }
-        },
-        "ru" : { },
-        "es-ar" : { },
-        "sl" : { },
-        "nb" : { },
+        "en" : { },
         "pt-br" : { },
-        "sv" : { },
-        "de" : { },
-        "it" : { },
-        "fr" : { },
-        "ca" : { },
-        "es" : { },
-        "pt-pt" : { },
-        "pt" : { },
-        "tr" : { }
+        "es-ar" : { },
+        "de" : { }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
       "valueSets" : { }
     },
     "adlVersion" : "1.4",
-    "buildUid" : "36964f0d-0251-4791-be69-ae1ccd23be77",
+    "buildUid" : "46c18c89-3428-4e56-8aaa-33e4907ea711",
     "rmName" : "openehr",
     "rmRelease" : "1.1.0",
     "generated" : true,
@@ -4583,121 +4562,9 @@
         "codeString" : "de"
       },
       "author" : {
-        "name" : "Ramona Wellmann",
+        "name" : "Natalia Strauch",
         "organisation" : "Medizinische Hochschule Hannover",
-        "email" : "wellmann.ramona@mh-hannover.de"
-      },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "ru"
-      },
-      "author" : {
-        "name" : "Art Latyp Латыпов Артур Шамилевич",
-        "organisation" : "RusBITech РусБИТех, Москва"
-      },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "sv"
-      },
-      "author" : {
-        "name" : "Daniel Hall",
-        "organisation" : "Region Östergötland",
-        "email" : "daniel.hall@regionostergotland.se"
-      },
-      "accreditation" : "Åsa Skagerhult, Lisa Axelsson",
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "pt"
-      },
-      "author" : {
-        "name" : "Vanessa Pereira",
-        "organisation" : "Luxembourg Institute of Health (LIH)",
-        "email" : "vanessapereira@protonmail.com"
-      },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "pt-br"
-      },
-      "author" : {
-        "name" : "Vladimir Pizzo",
-        "organisation" : "Hospital Sírio Libanês, São Paulo, Brazil",
-        "email" : "vladimir.pizzo@hsl.org.br"
-      },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "it"
-      },
-      "author" : {
-        "name" : "Paolo Anedda",
-        "organisation" : "Inpeco",
-        "email" : "paolo.anedda@inpeco.com"
-      },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "fr"
-      },
-      "author" : {
-        "name" : "Vanessa Pereira",
-        "organisation" : "Better - Pathfinder",
-        "email" : "vanessapereira@protonmail.com"
-      },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "es"
-      },
-      "author" : {
-        "name" : "Laura Moral Lopez",
-        "organisation" : "Sistema de Salut de Catalunya",
-        "email" : "lmorallopez@gmail.com"
-      },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "pt-pt"
-      },
-      "author" : {
-        "name" : "Vanessa Pereira",
-        "organisation" : "Luxembourg Institute of Health (LIH)",
-        "email" : "vanessapereira@protonmail.com"
+        "email" : "Strauch.Natalia@mh-hannover.de"
       },
       "otherDetails" : { }
     }, {
@@ -4710,8 +4577,10 @@
       },
       "author" : {
         "name" : "Alan March",
-        "organisation" : "Hospital Universitario Austral, Buenos Aires, Argentina"
+        "organisation" : "Hospital Universiatario Austral, Pilar, Buenos Aires, Argentina.",
+        "email" : "alandmarch@gmail.com"
       },
+      "accreditation" : "MD",
       "otherDetails" : { }
     }, {
       "@type" : "TRANSLATION_DETAILS",
@@ -4719,60 +4588,19 @@
         "terminologyId" : {
           "value" : "ISO_639-1"
         },
-        "codeString" : "nb"
+        "codeString" : "pt-br"
       },
       "author" : {
-        "einar.fosse@unn.no" : "einar.fosse@unn.no",
-        "name" : "Einar Fosse",
-        "organisation" : "Norwegian Centre for Integrated Care and Telemedicine, Tromsø, Norway"
+        "name" : "Adriana Kitajima, Débora Farage, Fernanda Maia, Laíse Figueiredo, Marivan Abrahão",
+        "organisation" : "Core Consulting",
+        "email" : "contato@coreconsulting.com.br"
       },
+      "accreditation" : "Hospital Alemão Oswaldo Cruz (HAOC)",
       "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "sl"
-      },
-      "author" : {
-        "name" : "?"
-      },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "ca"
-      },
-      "author" : {
-        "name" : "Laura Moral Lopez",
-        "organisation" : "Sistema de Salut de Catalunya",
-        "email" : "lmorallopez@gmail.com, lauramoral@catsalut.cat"
-      },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "tr"
-      },
-      "author" : {
-        "name" : "Olha Nikolaieva",
-        "organisation" : "University Hospital Basel",
-        "email" : "olha.nikolaieva@usb.ch"
-      },
-      "otherDetails" : {
-        "other_contributors" : "Koray Atalag, GALATA-Digital, New Zealand"
-      }
     } ]
   }, {
     "@type" : "TEMPLATE_OVERLAY",
-    "uid" : "d95e5404-c9db-4bc4-8b9d-438a62b4013f",
+    "uid" : "703ce6bf-5534-43d9-99ce-ebee4bfc242f",
     "description" : {
       "@type" : "RESOURCE_DESCRIPTION",
       "originalAuthor" : { },
@@ -4781,7 +4609,7 @@
       "references" : { },
       "conversionDetails" : { },
       "otherDetails" : {
-        "PARENT:MD5-CAM-1.0.1" : "9FC6BA2D63BE451F034CE25153F4E298"
+        "PARENT:MD5-CAM-1.0.1" : "D9A0BF65B696B4A73E68E4F2A7D6C74F"
       },
       "details" : { }
     },
@@ -4795,11 +4623,11 @@
         }
       }
     },
-    "parentArchetypeId" : "openEHR-EHR-SECTION.adhoc.v1",
+    "parentArchetypeId" : "openEHR-EHR-SECTION.medication_list.v0",
     "differential" : true,
     "archetypeId" : {
       "@type" : "ARCHETYPE_HRID",
-      "value" : "openEHR-EHR-SECTION.ovl-adhoc-002.v1"
+      "value" : "openEHR-EHR-SECTION.ovl-medication_list-001.v0"
     },
     "definition" : {
       "@type" : "C_COMPLEX_OBJECT",
@@ -4808,18 +4636,11 @@
       "attributes" : [ {
         "@type" : "C_ATTRIBUTE",
         "rmAttributeName" : "items",
-        "existence" : "0..1",
-        "cardinality" : {
-          "@type" : "CARDINALITY",
-          "interval" : "1..*",
-          "ordered" : false,
-          "unique" : false
-        },
         "children" : [ {
           "@type" : "C_ARCHETYPE_ROOT",
           "rmTypeName" : "INSTRUCTION",
           "occurrences" : "0..*",
-          "nodeId" : "at0.1",
+          "nodeId" : "at0004.1",
           "attributes" : [ ],
           "attributeTuples" : [ ],
           "archetypeRef" : "openEHR-EHR-INSTRUCTION.ovl-medication_order-001.v3",
@@ -4832,133 +4653,18 @@
       "@type" : "ARCHETYPE_TERMINOLOGY",
       "conceptCode" : "at0000",
       "termDefinitions" : {
-        "en" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "Medications",
-            "description" : "A generic section header which should be renamed in a template to suit a specific clinical context."
-          }
-        },
-        "ru" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "заготовка заголовка (2)",
-            "description" : "Образец заголовка раздела"
-          }
-        },
-        "es-ar" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "Encabezado ad hoc (2)",
-            "description" : "Un encabezado de sección de tipo genérico que será renombrado en una plantilla para su empleo en un contexto clínico específico."
-          }
-        },
-        "sl" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "Naslov sekcije (2)",
-            "description" : "Naslov sekcije"
-          }
-        },
-        "nb" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "Templat-overskrift (2)",
-            "description" : "En generisk seksjonsoverskrift som skal gis nytt navn i en templat for å passe i en gitt klinisk kontekst."
-          }
-        },
-        "pt-br" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "Cabeçalho Ad hoc (2)",
-            "description" : "Um cabeçalho de sessão genérico que deve ser renomeado no template para adequar-se a um contexto clínico específico."
-          }
-        },
-        "sv" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "Rubrik (2)",
-            "description" : "En allmän avsnittsrubrik som döps om i en openEHR-mall för att passa in i en specifik klinisk kontext."
-          }
-        },
-        "de" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "Ad hoc Überschrift (2)",
-            "description" : "Eine generische Abschnittsüberschrift eines Templates, welche entsprechend dem spezifischen klinischen Kontext umbenannt werden sollte."
-          }
-        },
-        "it" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "Intestazione di sezione ad hoc (2)",
-            "description" : "Un'intestazione di sezione generica che dovrebbe essere rinominata in un template per adattarsi ad uno specifico contesto clinico."
-          }
-        },
-        "fr" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "Rubrique ad hoc (2)",
-            "description" : "Un en-tête de section générique qui doit être renommé dans un modèle pour s'adapter à un contexte clinique spécifique."
-          }
-        },
-        "ca" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "Capçalera ad hoc (2)",
-            "description" : "Una capçalera de secció genèrica que s'ha de rebatejar en una plantilla per adaptar-se a un context clínic específic."
-          }
-        },
-        "es" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "Encapçalament ad hoc (2)",
-            "description" : "Un encapçalament de secció genèric que s'hauria de reanomenar en una plantilla per adaptar-se a un context clínic específic."
-          }
-        },
-        "pt-pt" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "Título ad hoc (2)",
-            "description" : "Um cabeçalho de secção genérico que deve ser renomeado ao nível do template para se adequar a um contexto clínico específico."
-          }
-        },
-        "pt" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "Título ad hoc (2)",
-            "description" : "Um cabeçalho de secção genérico que deve ser renomeado ao nível do template para se adequar a um contexto clínico específico."
-          }
-        },
-        "tr" : {
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000.1",
-            "text" : "Geçici başlık (2)",
-            "description" : "Belirli bir klinik bağlama uyacak şekilde bir şablonda yeniden adlandırılması gereken genel bir bölüm başlığı."
-          }
-        }
+        "en" : { },
+        "ru" : { },
+        "es" : { },
+        "pt-br" : { },
+        "es-ar" : { }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
       "valueSets" : { }
     },
     "adlVersion" : "1.4",
-    "buildUid" : "36964f0d-0251-4791-be69-ae1ccd23be77",
+    "buildUid" : "29ba71d4-6666-4306-8a3b-71897754b27b",
     "rmName" : "openehr",
     "rmRelease" : "1.1.0",
     "generated" : true,
@@ -4975,125 +4681,14 @@
         "terminologyId" : {
           "value" : "ISO_639-1"
         },
-        "codeString" : "de"
-      },
-      "author" : {
-        "name" : "Ramona Wellmann",
-        "organisation" : "Medizinische Hochschule Hannover",
-        "email" : "wellmann.ramona@mh-hannover.de"
-      },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
         "codeString" : "ru"
       },
       "author" : {
-        "name" : "Art Latyp Латыпов Артур Шамилевич",
-        "organisation" : "RusBITech РусБИТех, Москва"
+        "name" : "Art Latyp; Латыпов Артур Шамилевич",
+        "organisation" : "RusBITech; РусБИТех, Москва",
+        "email" : "alatypov@asteis.net"
       },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "sv"
-      },
-      "author" : {
-        "name" : "Daniel Hall",
-        "organisation" : "Region Östergötland",
-        "email" : "daniel.hall@regionostergotland.se"
-      },
-      "accreditation" : "Åsa Skagerhult, Lisa Axelsson",
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "pt"
-      },
-      "author" : {
-        "name" : "Vanessa Pereira",
-        "organisation" : "Luxembourg Institute of Health (LIH)",
-        "email" : "vanessapereira@protonmail.com"
-      },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "pt-br"
-      },
-      "author" : {
-        "name" : "Vladimir Pizzo",
-        "organisation" : "Hospital Sírio Libanês, São Paulo, Brazil",
-        "email" : "vladimir.pizzo@hsl.org.br"
-      },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "it"
-      },
-      "author" : {
-        "name" : "Paolo Anedda",
-        "organisation" : "Inpeco",
-        "email" : "paolo.anedda@inpeco.com"
-      },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "fr"
-      },
-      "author" : {
-        "name" : "Vanessa Pereira",
-        "organisation" : "Better - Pathfinder",
-        "email" : "vanessapereira@protonmail.com"
-      },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "es"
-      },
-      "author" : {
-        "name" : "Laura Moral Lopez",
-        "organisation" : "Sistema de Salut de Catalunya",
-        "email" : "lmorallopez@gmail.com"
-      },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "pt-pt"
-      },
-      "author" : {
-        "name" : "Vanessa Pereira",
-        "organisation" : "Luxembourg Institute of Health (LIH)",
-        "email" : "vanessapereira@protonmail.com"
-      },
+      "accreditation" : "hmm",
       "otherDetails" : { }
     }, {
       "@type" : "TRANSLATION_DETAILS",
@@ -5105,8 +4700,10 @@
       },
       "author" : {
         "name" : "Alan March",
-        "organisation" : "Hospital Universitario Austral, Buenos Aires, Argentina"
+        "organisation" : "Hospital Universitario Austral, Pilar, Buenos Aires, Argentina.",
+        "email" : "alandmarch@gmail.com"
       },
+      "accreditation" : "MD",
       "otherDetails" : { }
     }, {
       "@type" : "TRANSLATION_DETAILS",
@@ -5114,13 +4711,14 @@
         "terminologyId" : {
           "value" : "ISO_639-1"
         },
-        "codeString" : "nb"
+        "codeString" : "pt-br"
       },
       "author" : {
-        "einar.fosse@unn.no" : "einar.fosse@unn.no",
-        "name" : "Einar Fosse",
-        "organisation" : "Norwegian Centre for Integrated Care and Telemedicine, Tromsø, Norway"
+        "name" : "Adriana Kitajima, Débora Farage, Fernanda Maia, Laíse Figueiredo, Marivan Abrahão",
+        "organisation" : "Core Consulting",
+        "email" : "contato@coreconsulting.com.br"
       },
+      "accreditation" : "Hospital Alemão Oswaldo Cruz (HAOC)",
       "otherDetails" : { }
     }, {
       "@type" : "TRANSLATION_DETAILS",
@@ -5128,42 +4726,15 @@
         "terminologyId" : {
           "value" : "ISO_639-1"
         },
-        "codeString" : "sl"
+        "codeString" : "es"
       },
       "author" : {
-        "name" : "?"
+        "name" : "Pablo Pazos",
+        "organisation" : "CaboLabs",
+        "pablo,pazos@cabolabs.com" : "pablo,pazos@cabolabs.com"
       },
+      "accreditation" : "Computer Engineer",
       "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "ca"
-      },
-      "author" : {
-        "name" : "Laura Moral Lopez",
-        "organisation" : "Sistema de Salut de Catalunya",
-        "email" : "lmorallopez@gmail.com, lauramoral@catsalut.cat"
-      },
-      "otherDetails" : { }
-    }, {
-      "@type" : "TRANSLATION_DETAILS",
-      "language" : {
-        "terminologyId" : {
-          "value" : "ISO_639-1"
-        },
-        "codeString" : "tr"
-      },
-      "author" : {
-        "name" : "Olha Nikolaieva",
-        "organisation" : "University Hospital Basel",
-        "email" : "olha.nikolaieva@usb.ch"
-      },
-      "otherDetails" : {
-        "other_contributors" : "Koray Atalag, GALATA-Digital, New Zealand"
-      }
     } ]
   } ],
   "originalLanguage" : {
