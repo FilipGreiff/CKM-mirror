@@ -19,9 +19,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "sem_ver" : "3.0.0",
+      "sem_ver" : "4.0.0",
       "build_uid" : "",
-      "MD5-CAM-1.0.1" : "776aca48b01a0bf0376aec2d941806b3",
+      "MD5-CAM-1.0.1" : "ffd3ea2225cbd604e68e55b5439172a9",
       "PARENT:MD5-CAM-1.0.1" : "3B0765A6B395C9D01595FDF2D440E6CB"
     },
     "details" : {
@@ -2761,11 +2761,7 @@
     "annotations" : {
       "@type" : "RESOURCE_ANNOTATIONS",
       "documentation" : {
-        "en" : {
-          "" : {
-            "loadFromTemplate" : "Medication list"
-          }
-        }
+        "en" : { }
       }
     },
     "parentArchetypeId" : "openEHR-EHR-INSTRUCTION.medication_order.v3",
